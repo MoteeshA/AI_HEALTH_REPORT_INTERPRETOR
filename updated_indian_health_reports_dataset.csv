@@ -1,0 +1,1401 @@
+Test_Name,Short_Form,Explanation,Reading,Unit,Normal_Range_Low,Normal_Range_High,Status
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",18.87,g/dL,13.0,17.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,120.0,%,95.0,100.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,68.52,mg/dL,70.0,100.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",3.22,mg/dL,0.0,8.0,Normal
+Triglycerides,TG,Type of fat in blood,77.73,mg/dL,40.0,160.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,29.51,kg/m2,18.5,24.9,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,158.22,mg/dL,100.0,140.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,1.96,mg/dL,0.0,15.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.48,mg/dL,0.3,1.2,Normal
+Calcium,Ca,Essential mineral for bones and nerves,10.87,mg/dL,8.5,10.5,High
+CRP,CRP,"C-reactive protein, indicates inflammation",1.77,mg/L,0.0,5.0,Normal
+HDL,HDL,Good cholesterol,28.89,mg/dL,40.0,60.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,9.54,mg/dL,8.5,10.5,Normal
+ESR,ESR,Inflammation marker in the body,24.57,mm/hr,0.0,20.0,High
+SGPT,ALT,Liver enzyme level,65.16,U/L,7.0,56.0,High
+SGOT,AST,Liver enzyme level,49.62,U/L,8.0,40.0,High
+ESR,ESR,Inflammation marker in the body,19.48,mm/hr,0.0,20.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,31.32,kg/m2,18.5,24.9,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",56.78,mmHg,60.0,80.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.7,mg/dL,0.0,8.0,High
+Total Cholesterol,CHOL,Total fat in blood,89.83,mg/dL,125.0,200.0,Low
+SGPT,ALT,Liver enzyme level,13.7,U/L,7.0,56.0,Normal
+WBC Count,WBC,White blood cells help fight infection,5.83,10^9/L,4.0,11.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",93.14,mmHg,60.0,80.0,High
+ESR,ESR,Inflammation marker in the body,3.81,mm/hr,0.0,20.0,Normal
+ESR,ESR,Inflammation marker in the body,1.28,mm/hr,0.0,20.0,Normal
+Blood Urea,UREA,Another kidney function test,27.28,mg/dL,15.0,40.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,25.38,kg/m2,18.5,24.9,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,142.81,U/L,44.0,147.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.65,mg/dL,0.0,8.0,High
+Bilirubin Total,Bili,Liver function marker,0.55,mg/dL,0.3,1.2,Normal
+Creatinine,CRE,Kidney function indicator,1.23,mg/dL,0.6,1.2,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,72.32,mg/dL,100.0,140.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.63,%,4.0,5.6,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",7.22,mg/dL,0.0,8.0,Normal
+Blood Urea,UREA,Another kidney function test,29.51,mg/dL,15.0,40.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",2.09,mg/L,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,113.58,mg/dL,100.0,140.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,15.13,kg/m2,18.5,24.9,Low
+SGOT,AST,Liver enzyme level,36.16,U/L,8.0,40.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,125.8,%,95.0,100.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.09,mg/dL,8.5,10.5,High
+Bilirubin Total,Bili,Liver function marker,1.24,mg/dL,0.3,1.2,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,80.41,mg/dL,100.0,140.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,106.81,%,95.0,100.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,79.94,%,95.0,100.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,7.53,mg/dL,8.5,10.5,Low
+SGPT,ALT,Liver enzyme level,20.04,U/L,7.0,56.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.14,mg/dL,0.3,1.2,Normal
+Bilirubin Total,Bili,Liver function marker,1.14,mg/dL,0.3,1.2,Normal
+HDL,HDL,Good cholesterol,46.74,mg/dL,40.0,60.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",142.35,mmHg,90.0,120.0,High
+Platelet Count,PLT,Platelets help with blood clotting,290.24,10^9/L,150.0,450.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.81,%,4.0,5.6,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,135.02,mg/dL,100.0,140.0,Normal
+HDL,HDL,Good cholesterol,76.39,mg/dL,40.0,60.0,High
+Total Cholesterol,CHOL,Total fat in blood,198.51,mg/dL,125.0,200.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,7.11,%,4.0,5.6,High
+HDL,HDL,Good cholesterol,29.8,mg/dL,40.0,60.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,110.48,mg/dL,100.0,140.0,Normal
+TSH,Thyroid,Thyroid hormone level,2.81,µIU/mL,0.4,4.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.62,mg/dL,0.0,8.0,High
+ESR,ESR,Inflammation marker in the body,1.56,mm/hr,0.0,20.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,48.72,U/L,44.0,147.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,108.05,U/L,44.0,147.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.37,mg/dL,3.5,7.2,Low
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",4.77,mg/dL,0.0,5.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.9,g/dL,13.0,17.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",7.64,mg/dL,0.0,8.0,Normal
+Creatinine,CRE,Kidney function indicator,0.82,mg/dL,0.6,1.2,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,22.57,kg/m2,18.5,24.9,Normal
+TSH,Thyroid,Thyroid hormone level,1.55,µIU/mL,0.4,4.0,Normal
+TSH,Thyroid,Thyroid hormone level,0.75,µIU/mL,0.4,4.0,Normal
+WBC Count,WBC,White blood cells help fight infection,9.96,10^9/L,4.0,11.0,Normal
+SGPT,ALT,Liver enzyme level,61.06,U/L,7.0,56.0,High
+Triglycerides,TG,Type of fat in blood,195.19,mg/dL,40.0,160.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",20.18,g/dL,13.0,17.0,High
+Vitamin D,Vit D,Important for bones,44.6,ng/mL,20.0,50.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,108.65,mg/dL,100.0,140.0,Normal
+ESR,ESR,Inflammation marker in the body,13.75,mm/hr,0.0,20.0,Normal
+Creatinine,CRE,Kidney function indicator,1.46,mg/dL,0.6,1.2,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.04,mg/dL,0.0,8.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",102.31,mmHg,90.0,120.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",71.61,mmHg,60.0,80.0,Normal
+Triglycerides,TG,Type of fat in blood,59.62,mg/dL,40.0,160.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",65.97,mmHg,60.0,80.0,Normal
+Creatinine,CRE,Kidney function indicator,1.54,mg/dL,0.6,1.2,High
+Triglycerides,TG,Type of fat in blood,59.55,mg/dL,40.0,160.0,Normal
+ESR,ESR,Inflammation marker in the body,13.2,mm/hr,0.0,20.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.61,%,4.0,5.6,High
+Urine Sugar,Sugar,Checks for glucose in urine,2.59,mg/dL,0.0,15.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.87,mg/dL,0.3,1.2,Normal
+Total Cholesterol,CHOL,Total fat in blood,98.68,mg/dL,125.0,200.0,Low
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.49,mg/dL,0.0,5.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",49.05,mmHg,60.0,80.0,Low
+TSH,Thyroid,Thyroid hormone level,4.41,µIU/mL,0.4,4.0,High
+Uric Acid,UA,Indicates gout or kidney issues,4.86,mg/dL,3.5,7.2,Normal
+Creatinine,CRE,Kidney function indicator,1.4,mg/dL,0.6,1.2,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,116.74,mg/dL,70.0,100.0,High
+HDL,HDL,Good cholesterol,29.51,mg/dL,40.0,60.0,Low
+Vitamin D,Vit D,Important for bones,53.32,ng/mL,20.0,50.0,High
+ESR,ESR,Inflammation marker in the body,16.27,mm/hr,0.0,20.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,13.07,mg/dL,8.5,10.5,High
+Blood Urea,UREA,Another kidney function test,33.32,mg/dL,15.0,40.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.88,mg/dL,0.0,8.0,Normal
+SGPT,ALT,Liver enzyme level,26.25,U/L,7.0,56.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.5,mg/dL,0.3,1.2,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.31,mg/dL,8.5,10.5,Low
+Vitamin D,Vit D,Important for bones,44.93,ng/mL,20.0,50.0,Normal
+SGOT,AST,Liver enzyme level,49.94,U/L,8.0,40.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",3.47,mg/L,0.0,5.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,74.86,%,95.0,100.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,122.2,%,95.0,100.0,High
+WBC Count,WBC,White blood cells help fight infection,4.82,10^9/L,4.0,11.0,Normal
+Triglycerides,TG,Type of fat in blood,159.76,mg/dL,40.0,160.0,Normal
+TSH,Thyroid,Thyroid hormone level,4.08,µIU/mL,0.4,4.0,High
+Creatinine,CRE,Kidney function indicator,0.81,mg/dL,0.6,1.2,Normal
+ESR,ESR,Inflammation marker in the body,8.01,mm/hr,0.0,20.0,Normal
+SGOT,AST,Liver enzyme level,28.87,U/L,8.0,40.0,Normal
+SGPT,ALT,Liver enzyme level,41.56,U/L,7.0,56.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,116.04,10^9/L,150.0,450.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.86,%,4.0,5.6,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",21.81,g/dL,13.0,17.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",107.82,mmHg,90.0,120.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",1.55,mg/L,0.0,5.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.72,mg/dL,0.0,8.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,26.05,kg/m2,18.5,24.9,High
+LDL,LDL,Bad cholesterol,49.68,mg/dL,0.0,100.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",100.25,mmHg,60.0,80.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,11.66,mg/dL,0.0,15.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,104.08,%,95.0,100.0,High
+SGPT,ALT,Liver enzyme level,53.81,U/L,7.0,56.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.11,mg/dL,0.0,8.0,Normal
+Blood Urea,UREA,Another kidney function test,50.32,mg/dL,15.0,40.0,High
+LDL,LDL,Bad cholesterol,103.78,mg/dL,0.0,100.0,High
+Calcium,Ca,Essential mineral for bones and nerves,12.17,mg/dL,8.5,10.5,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,181.12,U/L,44.0,147.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,126.96,%,95.0,100.0,High
+TSH,Thyroid,Thyroid hormone level,1.14,µIU/mL,0.4,4.0,Normal
+Blood Urea,UREA,Another kidney function test,47.71,mg/dL,15.0,40.0,High
+SGOT,AST,Liver enzyme level,19.29,U/L,8.0,40.0,Normal
+Blood Urea,UREA,Another kidney function test,40.65,mg/dL,15.0,40.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.18,%,4.0,5.6,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",77.82,mmHg,60.0,80.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.72,g/dL,13.0,17.0,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",15.61,g/dL,13.0,17.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,100.15,%,95.0,100.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.85,%,4.0,5.6,High
+Uric Acid,UA,Indicates gout or kidney issues,4.1,mg/dL,3.5,7.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",55.6,mmHg,60.0,80.0,Low
+WBC Count,WBC,White blood cells help fight infection,14.06,10^9/L,4.0,11.0,High
+Uric Acid,UA,Indicates gout or kidney issues,4.62,mg/dL,3.5,7.2,Normal
+SGPT,ALT,Liver enzyme level,60.44,U/L,7.0,56.0,High
+ESR,ESR,Inflammation marker in the body,6.43,mm/hr,0.0,20.0,Normal
+SGPT,ALT,Liver enzyme level,58.11,U/L,7.0,56.0,High
+Vitamin D,Vit D,Important for bones,38.31,ng/mL,20.0,50.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,58.97,mg/dL,70.0,100.0,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,89.95,mg/dL,70.0,100.0,Normal
+HDL,HDL,Good cholesterol,72.79,mg/dL,40.0,60.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.23,g/dL,13.0,17.0,Low
+HDL,HDL,Good cholesterol,29.03,mg/dL,40.0,60.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,119.46,%,95.0,100.0,High
+Creatinine,CRE,Kidney function indicator,0.96,mg/dL,0.6,1.2,Normal
+WBC Count,WBC,White blood cells help fight infection,7.17,10^9/L,4.0,11.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.0,mg/dL,0.3,1.2,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,103.06,mg/dL,70.0,100.0,High
+Blood Urea,UREA,Another kidney function test,24.76,mg/dL,15.0,40.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,137.69,U/L,44.0,147.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,9.73,mg/dL,8.5,10.5,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.79,mg/dL,3.5,7.2,Normal
+HDL,HDL,Good cholesterol,63.93,mg/dL,40.0,60.0,High
+SGOT,AST,Liver enzyme level,46.11,U/L,8.0,40.0,High
+LDL,LDL,Bad cholesterol,25.2,mg/dL,0.0,100.0,Normal
+TSH,Thyroid,Thyroid hormone level,3.05,µIU/mL,0.4,4.0,Normal
+Triglycerides,TG,Type of fat in blood,146.09,mg/dL,40.0,160.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,148.52,mg/dL,125.0,200.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.23,mg/dL,0.0,5.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,100.43,%,95.0,100.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",43.74,mmHg,60.0,80.0,Low
+Triglycerides,TG,Type of fat in blood,98.15,mg/dL,40.0,160.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",9.94,g/dL,13.0,17.0,Low
+Creatinine,CRE,Kidney function indicator,0.68,mg/dL,0.6,1.2,Normal
+ESR,ESR,Inflammation marker in the body,4.91,mm/hr,0.0,20.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,13.58,kg/m2,18.5,24.9,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",16.3,g/dL,13.0,17.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,13.71,mg/dL,0.0,15.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,122.81,%,95.0,100.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",4.68,mg/L,0.0,5.0,Normal
+WBC Count,WBC,White blood cells help fight infection,8.15,10^9/L,4.0,11.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",3.5,mg/dL,0.0,5.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,30.55,kg/m2,18.5,24.9,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,83.65,mg/dL,70.0,100.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.54,mg/dL,0.0,8.0,High
+TSH,Thyroid,Thyroid hormone level,1.49,µIU/mL,0.4,4.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,13.69,mg/dL,0.0,15.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,24.64,kg/m2,18.5,24.9,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,91.25,mg/dL,70.0,100.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,23.49,kg/m2,18.5,24.9,Normal
+Total Cholesterol,CHOL,Total fat in blood,122.39,mg/dL,125.0,200.0,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",9.26,g/dL,13.0,17.0,Low
+TSH,Thyroid,Thyroid hormone level,2.77,µIU/mL,0.4,4.0,Normal
+Vitamin D,Vit D,Important for bones,18.77,ng/mL,20.0,50.0,Low
+WBC Count,WBC,White blood cells help fight infection,3.0,10^9/L,4.0,11.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,9.62,mg/dL,8.5,10.5,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,18.16,mg/dL,0.0,15.0,High
+Triglycerides,TG,Type of fat in blood,111.48,mg/dL,40.0,160.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,124.05,mg/dL,70.0,100.0,High
+TSH,Thyroid,Thyroid hormone level,2.2,µIU/mL,0.4,4.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,560.83,10^9/L,150.0,450.0,High
+HDL,HDL,Good cholesterol,49.53,mg/dL,40.0,60.0,Normal
+LDL,LDL,Bad cholesterol,77.41,mg/dL,0.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,56.97,mg/dL,40.0,160.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,114.05,mg/dL,100.0,140.0,Normal
+Vitamin D,Vit D,Important for bones,63.7,ng/mL,20.0,50.0,High
+Uric Acid,UA,Indicates gout or kidney issues,7.02,mg/dL,3.5,7.2,Normal
+Triglycerides,TG,Type of fat in blood,179.78,mg/dL,40.0,160.0,High
+SGPT,ALT,Liver enzyme level,6.48,U/L,7.0,56.0,Low
+WBC Count,WBC,White blood cells help fight infection,11.12,10^9/L,4.0,11.0,High
+SGOT,AST,Liver enzyme level,34.99,U/L,8.0,40.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.24,mg/dL,0.3,1.2,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,104.72,mg/dL,100.0,140.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,77.2,mg/dL,70.0,100.0,Normal
+TSH,Thyroid,Thyroid hormone level,2.98,µIU/mL,0.4,4.0,Normal
+SGOT,AST,Liver enzyme level,11.54,U/L,8.0,40.0,Normal
+SGPT,ALT,Liver enzyme level,35.11,U/L,7.0,56.0,Normal
+ESR,ESR,Inflammation marker in the body,6.08,mm/hr,0.0,20.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.24,mg/dL,0.0,8.0,High
+WBC Count,WBC,White blood cells help fight infection,3.24,10^9/L,4.0,11.0,Low
+SGOT,AST,Liver enzyme level,21.79,U/L,8.0,40.0,Normal
+LDL,LDL,Bad cholesterol,34.02,mg/dL,0.0,100.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.93,kg/m2,18.5,24.9,Normal
+Creatinine,CRE,Kidney function indicator,0.64,mg/dL,0.6,1.2,Normal
+SGPT,ALT,Liver enzyme level,56.88,U/L,7.0,56.0,High
+SGOT,AST,Liver enzyme level,48.96,U/L,8.0,40.0,High
+HDL,HDL,Good cholesterol,76.99,mg/dL,40.0,60.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.66,%,4.0,5.6,Low
+HDL,HDL,Good cholesterol,62.22,mg/dL,40.0,60.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",2.54,mg/L,0.0,5.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",15.41,g/dL,13.0,17.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.3,mg/dL,0.3,1.2,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.26,%,4.0,5.6,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",54.26,mmHg,60.0,80.0,Low
+Creatinine,CRE,Kidney function indicator,1.33,mg/dL,0.6,1.2,High
+Oxygen Saturation,SpO2,Oxygen level in blood,105.05,%,95.0,100.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",145.9,mmHg,90.0,120.0,High
+Vitamin D,Vit D,Important for bones,36.08,ng/mL,20.0,50.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.9,mg/dL,0.3,1.2,Normal
+Bilirubin Total,Bili,Liver function marker,0.8,mg/dL,0.3,1.2,Normal
+Platelet Count,PLT,Platelets help with blood clotting,156.95,10^9/L,150.0,450.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",14.11,g/dL,13.0,17.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",6.24,mg/L,0.0,5.0,High
+WBC Count,WBC,White blood cells help fight infection,3.14,10^9/L,4.0,11.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.09,%,4.0,5.6,High
+HDL,HDL,Good cholesterol,46.74,mg/dL,40.0,60.0,Normal
+Triglycerides,TG,Type of fat in blood,71.79,mg/dL,40.0,160.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.23,mg/dL,0.3,1.2,Low
+TSH,Thyroid,Thyroid hormone level,0.32,µIU/mL,0.4,4.0,Low
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,60.41,U/L,44.0,147.0,Normal
+Creatinine,CRE,Kidney function indicator,1.51,mg/dL,0.6,1.2,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",139.11,mmHg,90.0,120.0,High
+SGPT,ALT,Liver enzyme level,15.01,U/L,7.0,56.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,111.38,%,95.0,100.0,High
+Total Cholesterol,CHOL,Total fat in blood,243.44,mg/dL,125.0,200.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.91,mg/dL,8.5,10.5,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,25.25,kg/m2,18.5,24.9,High
+LDL,LDL,Bad cholesterol,80.0,mg/dL,0.0,100.0,Normal
+HDL,HDL,Good cholesterol,75.42,mg/dL,40.0,60.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,56.14,U/L,44.0,147.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,84.06,mg/dL,70.0,100.0,Normal
+HDL,HDL,Good cholesterol,28.44,mg/dL,40.0,60.0,Low
+Triglycerides,TG,Type of fat in blood,108.05,mg/dL,40.0,160.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,537.31,10^9/L,150.0,450.0,High
+Calcium,Ca,Essential mineral for bones and nerves,9.1,mg/dL,8.5,10.5,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.12,mg/dL,0.0,8.0,High
+SGPT,ALT,Liver enzyme level,69.25,U/L,7.0,56.0,High
+Vitamin D,Vit D,Important for bones,31.27,ng/mL,20.0,50.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",56.78,mmHg,60.0,80.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,132.31,mg/dL,100.0,140.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.22,mg/dL,0.3,1.2,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.6,%,4.0,5.6,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.57,mg/dL,0.0,8.0,High
+Triglycerides,TG,Type of fat in blood,203.77,mg/dL,40.0,160.0,High
+WBC Count,WBC,White blood cells help fight infection,4.92,10^9/L,4.0,11.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,7.04,%,4.0,5.6,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",121.49,mmHg,90.0,120.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,26.15,kg/m2,18.5,24.9,High
+Calcium,Ca,Essential mineral for bones and nerves,9.68,mg/dL,8.5,10.5,Normal
+SGOT,AST,Liver enzyme level,28.12,U/L,8.0,40.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.17,%,4.0,5.6,Low
+Platelet Count,PLT,Platelets help with blood clotting,182.97,10^9/L,150.0,450.0,Normal
+Triglycerides,TG,Type of fat in blood,177.12,mg/dL,40.0,160.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.37,mg/dL,0.0,8.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",74.31,mmHg,60.0,80.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.95,mg/L,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,148.77,mg/dL,100.0,140.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,81.28,%,95.0,100.0,Low
+ESR,ESR,Inflammation marker in the body,1.25,mm/hr,0.0,20.0,Normal
+Triglycerides,TG,Type of fat in blood,92.05,mg/dL,40.0,160.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,60.42,mg/dL,70.0,100.0,Low
+LDL,LDL,Bad cholesterol,51.2,mg/dL,0.0,100.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.48,%,4.0,5.6,Normal
+Total Cholesterol,CHOL,Total fat in blood,96.52,mg/dL,125.0,200.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,87.18,%,95.0,100.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,114.24,%,95.0,100.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,179.85,U/L,44.0,147.0,High
+TSH,Thyroid,Thyroid hormone level,2.94,µIU/mL,0.4,4.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",148.54,mmHg,90.0,120.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.71,mg/dL,8.5,10.5,High
+TSH,Thyroid,Thyroid hormone level,4.69,µIU/mL,0.4,4.0,High
+ESR,ESR,Inflammation marker in the body,6.76,mm/hr,0.0,20.0,Normal
+Blood Urea,UREA,Another kidney function test,34.62,mg/dL,15.0,40.0,Normal
+Triglycerides,TG,Type of fat in blood,78.15,mg/dL,40.0,160.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,128.99,mg/dL,70.0,100.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",10.03,mg/dL,0.0,8.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.84,mg/dL,8.5,10.5,High
+Uric Acid,UA,Indicates gout or kidney issues,7.2,mg/dL,3.5,7.2,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.33,g/dL,13.0,17.0,Low
+Total Cholesterol,CHOL,Total fat in blood,124.96,mg/dL,125.0,200.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,446.12,10^9/L,150.0,450.0,Normal
+SGOT,AST,Liver enzyme level,19.42,U/L,8.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,11.59,mg/dL,8.5,10.5,High
+Creatinine,CRE,Kidney function indicator,1.47,mg/dL,0.6,1.2,High
+Vitamin D,Vit D,Important for bones,54.56,ng/mL,20.0,50.0,High
+SGOT,AST,Liver enzyme level,8.98,U/L,8.0,40.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",15.05,g/dL,13.0,17.0,Normal
+ESR,ESR,Inflammation marker in the body,20.19,mm/hr,0.0,20.0,High
+Blood Urea,UREA,Another kidney function test,17.75,mg/dL,15.0,40.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,8.38,mg/dL,3.5,7.2,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",2.19,mg/dL,0.0,5.0,Normal
+WBC Count,WBC,White blood cells help fight infection,12.19,10^9/L,4.0,11.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.36,%,4.0,5.6,Low
+Triglycerides,TG,Type of fat in blood,101.26,mg/dL,40.0,160.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",10.0,mg/dL,0.0,8.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",3.71,mg/dL,0.0,5.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.57,%,4.0,5.6,High
+Platelet Count,PLT,Platelets help with blood clotting,331.05,10^9/L,150.0,450.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",128.0,mmHg,90.0,120.0,High
+Calcium,Ca,Essential mineral for bones and nerves,10.71,mg/dL,8.5,10.5,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.83,%,4.0,5.6,Low
+Bilirubin Total,Bili,Liver function marker,0.3,mg/dL,0.3,1.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",103.89,mmHg,60.0,80.0,High
+SGOT,AST,Liver enzyme level,49.25,U/L,8.0,40.0,High
+Calcium,Ca,Essential mineral for bones and nerves,7.42,mg/dL,8.5,10.5,Low
+ESR,ESR,Inflammation marker in the body,14.3,mm/hr,0.0,20.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,544.62,10^9/L,150.0,450.0,High
+Total Cholesterol,CHOL,Total fat in blood,183.59,mg/dL,125.0,200.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",13.44,g/dL,13.0,17.0,Normal
+HDL,HDL,Good cholesterol,68.38,mg/dL,40.0,60.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,178.7,mg/dL,100.0,140.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",0.68,mg/L,0.0,5.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,128.81,mg/dL,125.0,200.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,366.51,10^9/L,150.0,450.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,152.93,U/L,44.0,147.0,High
+WBC Count,WBC,White blood cells help fight infection,8.97,10^9/L,4.0,11.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,112.27,%,95.0,100.0,High
+Bilirubin Total,Bili,Liver function marker,1.01,mg/dL,0.3,1.2,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.19,%,4.0,5.6,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",5.83,mg/L,0.0,5.0,High
+Blood Urea,UREA,Another kidney function test,49.03,mg/dL,15.0,40.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,8.19,mg/dL,0.0,15.0,Normal
+SGOT,AST,Liver enzyme level,42.28,U/L,8.0,40.0,High
+Vitamin D,Vit D,Important for bones,35.5,ng/mL,20.0,50.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.33,%,4.0,5.6,Normal
+Blood Urea,UREA,Another kidney function test,34.48,mg/dL,15.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,23.81,mm/hr,0.0,20.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.48,mg/dL,8.5,10.5,High
+Uric Acid,UA,Indicates gout or kidney issues,7.24,mg/dL,3.5,7.2,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.08,%,4.0,5.6,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",0.92,mg/L,0.0,5.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",2.01,mg/dL,0.0,8.0,Normal
+ESR,ESR,Inflammation marker in the body,6.57,mm/hr,0.0,20.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,3.18,mg/dL,0.0,15.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.44,mg/dL,0.3,1.2,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,66.77,mg/dL,70.0,100.0,Low
+SGPT,ALT,Liver enzyme level,5.82,U/L,7.0,56.0,Low
+Body Mass Index,BMI,Measure of body fat based on height and weight,32.33,kg/m2,18.5,24.9,High
+TSH,Thyroid,Thyroid hormone level,3.42,µIU/mL,0.4,4.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,259.76,10^9/L,150.0,450.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",19.81,g/dL,13.0,17.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",85.64,mmHg,90.0,120.0,Low
+WBC Count,WBC,White blood cells help fight infection,11.0,10^9/L,4.0,11.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,135.37,mg/dL,125.0,200.0,Normal
+LDL,LDL,Bad cholesterol,19.99,mg/dL,0.0,100.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",3.19,mg/dL,0.0,5.0,Normal
+HDL,HDL,Good cholesterol,39.21,mg/dL,40.0,60.0,Low
+Bilirubin Total,Bili,Liver function marker,0.74,mg/dL,0.3,1.2,Normal
+LDL,LDL,Bad cholesterol,110.85,mg/dL,0.0,100.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.4,mg/dL,0.0,8.0,High
+Creatinine,CRE,Kidney function indicator,0.48,mg/dL,0.6,1.2,Low
+Uric Acid,UA,Indicates gout or kidney issues,3.86,mg/dL,3.5,7.2,Normal
+ESR,ESR,Inflammation marker in the body,5.49,mm/hr,0.0,20.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",3.0,mg/L,0.0,5.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,88.02,mg/dL,70.0,100.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.87,mg/dL,3.5,7.2,Normal
+LDL,LDL,Bad cholesterol,53.09,mg/dL,0.0,100.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,15.04,kg/m2,18.5,24.9,Low
+Blood Urea,UREA,Another kidney function test,43.3,mg/dL,15.0,40.0,High
+Calcium,Ca,Essential mineral for bones and nerves,12.22,mg/dL,8.5,10.5,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.46,g/dL,13.0,17.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.64,%,4.0,5.6,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.01,mg/dL,0.0,8.0,Normal
+TSH,Thyroid,Thyroid hormone level,0.94,µIU/mL,0.4,4.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,9.5,mg/dL,8.5,10.5,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",115.54,mmHg,90.0,120.0,Normal
+LDL,LDL,Bad cholesterol,6.29,mg/dL,0.0,100.0,Normal
+Vitamin D,Vit D,Important for bones,46.06,ng/mL,20.0,50.0,Normal
+Vitamin D,Vit D,Important for bones,64.63,ng/mL,20.0,50.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",0.68,mg/L,0.0,5.0,Normal
+Blood Urea,UREA,Another kidney function test,25.13,mg/dL,15.0,40.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.73,mg/dL,0.0,5.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,4.69,mg/dL,3.5,7.2,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,149.4,mg/dL,100.0,140.0,High
+Creatinine,CRE,Kidney function indicator,1.26,mg/dL,0.6,1.2,High
+LDL,LDL,Bad cholesterol,69.49,mg/dL,0.0,100.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,136.86,mg/dL,125.0,200.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,189.6,mg/dL,125.0,200.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,10.2,mg/dL,8.5,10.5,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,6.85,mg/dL,0.0,15.0,Normal
+HDL,HDL,Good cholesterol,44.63,mg/dL,40.0,60.0,Normal
+Creatinine,CRE,Kidney function indicator,1.36,mg/dL,0.6,1.2,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,156.35,mg/dL,100.0,140.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,144.18,U/L,44.0,147.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",20.02,g/dL,13.0,17.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.79,%,4.0,5.6,Normal
+WBC Count,WBC,White blood cells help fight infection,12.89,10^9/L,4.0,11.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,108.81,U/L,44.0,147.0,Normal
+TSH,Thyroid,Thyroid hormone level,3.5,µIU/mL,0.4,4.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,27.67,kg/m2,18.5,24.9,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,139.39,mg/dL,100.0,140.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",91.66,mmHg,90.0,120.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,7.21,%,4.0,5.6,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",16.99,g/dL,13.0,17.0,Normal
+HDL,HDL,Good cholesterol,28.04,mg/dL,40.0,60.0,Low
+Bilirubin Total,Bili,Liver function marker,0.31,mg/dL,0.3,1.2,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,93.09,U/L,44.0,147.0,Normal
+ESR,ESR,Inflammation marker in the body,12.19,mm/hr,0.0,20.0,Normal
+HDL,HDL,Good cholesterol,51.5,mg/dL,40.0,60.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,13.93,kg/m2,18.5,24.9,Low
+Total Cholesterol,CHOL,Total fat in blood,166.03,mg/dL,125.0,200.0,Normal
+Creatinine,CRE,Kidney function indicator,0.86,mg/dL,0.6,1.2,Normal
+SGOT,AST,Liver enzyme level,33.24,U/L,8.0,40.0,Normal
+WBC Count,WBC,White blood cells help fight infection,14.27,10^9/L,4.0,11.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",101.74,mmHg,60.0,80.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,143.73,mg/dL,100.0,140.0,High
+Total Cholesterol,CHOL,Total fat in blood,180.63,mg/dL,125.0,200.0,Normal
+TSH,Thyroid,Thyroid hormone level,1.33,µIU/mL,0.4,4.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,71.89,mg/dL,100.0,140.0,Low
+Triglycerides,TG,Type of fat in blood,102.85,mg/dL,40.0,160.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",81.46,mmHg,60.0,80.0,High
+WBC Count,WBC,White blood cells help fight infection,13.24,10^9/L,4.0,11.0,High
+LDL,LDL,Bad cholesterol,2.79,mg/dL,0.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,114.43,mg/dL,40.0,160.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,117.09,%,95.0,100.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.32,kg/m2,18.5,24.9,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.23,mg/dL,0.0,5.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",103.01,mmHg,90.0,120.0,Normal
+Creatinine,CRE,Kidney function indicator,0.46,mg/dL,0.6,1.2,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",2.27,mg/L,0.0,5.0,Normal
+TSH,Thyroid,Thyroid hormone level,2.86,µIU/mL,0.4,4.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,122.21,%,95.0,100.0,High
+TSH,Thyroid,Thyroid hormone level,1.89,µIU/mL,0.4,4.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,245.49,mg/dL,125.0,200.0,High
+Uric Acid,UA,Indicates gout or kidney issues,8.55,mg/dL,3.5,7.2,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,127.94,U/L,44.0,147.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,12.49,mg/dL,8.5,10.5,High
+LDL,LDL,Bad cholesterol,124.23,mg/dL,0.0,100.0,High
+Creatinine,CRE,Kidney function indicator,0.97,mg/dL,0.6,1.2,Normal
+Triglycerides,TG,Type of fat in blood,30.86,mg/dL,40.0,160.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,127.62,mg/dL,100.0,140.0,Normal
+Vitamin D,Vit D,Important for bones,44.5,ng/mL,20.0,50.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.41,mg/dL,0.0,8.0,High
+Total Cholesterol,CHOL,Total fat in blood,127.43,mg/dL,125.0,200.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.98,mg/dL,0.0,8.0,Normal
+ESR,ESR,Inflammation marker in the body,23.03,mm/hr,0.0,20.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.09,kg/m2,18.5,24.9,Normal
+LDL,LDL,Bad cholesterol,26.37,mg/dL,0.0,100.0,Normal
+LDL,LDL,Bad cholesterol,77.66,mg/dL,0.0,100.0,Normal
+Vitamin D,Vit D,Important for bones,49.09,ng/mL,20.0,50.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",50.51,mmHg,60.0,80.0,Low
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",119.4,mmHg,90.0,120.0,Normal
+HDL,HDL,Good cholesterol,59.31,mg/dL,40.0,60.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",20.43,g/dL,13.0,17.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,88.01,mg/dL,70.0,100.0,Normal
+TSH,Thyroid,Thyroid hormone level,4.67,µIU/mL,0.4,4.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.52,%,4.0,5.6,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,181.21,U/L,44.0,147.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",80.14,mmHg,90.0,120.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,9.62,mg/dL,8.5,10.5,Normal
+Triglycerides,TG,Type of fat in blood,151.28,mg/dL,40.0,160.0,Normal
+HDL,HDL,Good cholesterol,61.86,mg/dL,40.0,60.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.11,mg/dL,0.0,5.0,Normal
+LDL,LDL,Bad cholesterol,18.71,mg/dL,0.0,100.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",2.36,mg/dL,0.0,8.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,94.91,%,95.0,100.0,Low
+WBC Count,WBC,White blood cells help fight infection,9.26,10^9/L,4.0,11.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,8.98,mg/dL,8.5,10.5,Normal
+ESR,ESR,Inflammation marker in the body,17.34,mm/hr,0.0,20.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.0,mg/dL,0.0,5.0,Normal
+ESR,ESR,Inflammation marker in the body,6.29,mm/hr,0.0,20.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,8.01,mg/dL,0.0,15.0,Normal
+LDL,LDL,Bad cholesterol,44.17,mg/dL,0.0,100.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,104.64,mg/dL,125.0,200.0,Low
+SGOT,AST,Liver enzyme level,36.64,U/L,8.0,40.0,Normal
+Blood Urea,UREA,Another kidney function test,28.55,mg/dL,15.0,40.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",99.76,mmHg,60.0,80.0,High
+Calcium,Ca,Essential mineral for bones and nerves,10.04,mg/dL,8.5,10.5,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",1.23,mg/L,0.0,5.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.18,mg/dL,8.5,10.5,Low
+Total Cholesterol,CHOL,Total fat in blood,148.24,mg/dL,125.0,200.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,1.18,mg/dL,0.0,15.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.97,mg/dL,0.3,1.2,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.62,%,4.0,5.6,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,32.24,kg/m2,18.5,24.9,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",4.21,mg/dL,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,109.63,mg/dL,100.0,140.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,13.39,mg/dL,8.5,10.5,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,66.24,mg/dL,70.0,100.0,Low
+Creatinine,CRE,Kidney function indicator,0.77,mg/dL,0.6,1.2,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",106.3,mmHg,90.0,120.0,Normal
+Blood Urea,UREA,Another kidney function test,34.97,mg/dL,15.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,2.72,mm/hr,0.0,20.0,Normal
+HDL,HDL,Good cholesterol,30.79,mg/dL,40.0,60.0,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",1.06,mg/L,0.0,5.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,136.29,mg/dL,125.0,200.0,Normal
+TSH,Thyroid,Thyroid hormone level,0.62,µIU/mL,0.4,4.0,Normal
+Vitamin D,Vit D,Important for bones,43.0,ng/mL,20.0,50.0,Normal
+SGPT,ALT,Liver enzyme level,17.17,U/L,7.0,56.0,Normal
+HDL,HDL,Good cholesterol,54.54,mg/dL,40.0,60.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,12.78,mg/dL,0.0,15.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,74.51,mg/dL,70.0,100.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",150.23,mmHg,90.0,120.0,High
+HDL,HDL,Good cholesterol,50.37,mg/dL,40.0,60.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.73,mg/dL,0.3,1.2,Normal
+Platelet Count,PLT,Platelets help with blood clotting,216.03,10^9/L,150.0,450.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",154.07,mmHg,90.0,120.0,High
+SGOT,AST,Liver enzyme level,17.02,U/L,8.0,40.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.01,mg/dL,0.3,1.2,Normal
+SGOT,AST,Liver enzyme level,41.16,U/L,8.0,40.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,77.07,%,95.0,100.0,Low
+HDL,HDL,Good cholesterol,74.7,mg/dL,40.0,60.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,96.73,mg/dL,100.0,140.0,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,50.48,mg/dL,70.0,100.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,183.77,10^9/L,150.0,450.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,83.96,mg/dL,70.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,189.97,mg/dL,40.0,160.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",153.37,mmHg,90.0,120.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",149.3,mmHg,90.0,120.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,103.17,mg/dL,100.0,140.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,71.6,mg/dL,100.0,140.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,90.16,mg/dL,100.0,140.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,197.8,10^9/L,150.0,450.0,Normal
+SGPT,ALT,Liver enzyme level,54.77,U/L,7.0,56.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.74,kg/m2,18.5,24.9,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.08,g/dL,13.0,17.0,Low
+Blood Urea,UREA,Another kidney function test,49.27,mg/dL,15.0,40.0,High
+Bilirubin Total,Bili,Liver function marker,0.79,mg/dL,0.3,1.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",58.62,mmHg,60.0,80.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,116.18,%,95.0,100.0,High
+HDL,HDL,Good cholesterol,59.41,mg/dL,40.0,60.0,Normal
+TSH,Thyroid,Thyroid hormone level,4.93,µIU/mL,0.4,4.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,144.04,mg/dL,100.0,140.0,High
+Uric Acid,UA,Indicates gout or kidney issues,3.77,mg/dL,3.5,7.2,Normal
+Uric Acid,UA,Indicates gout or kidney issues,8.03,mg/dL,3.5,7.2,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.63,%,4.0,5.6,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,186.48,U/L,44.0,147.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,118.38,U/L,44.0,147.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,79.6,%,95.0,100.0,Low
+SGOT,AST,Liver enzyme level,25.77,U/L,8.0,40.0,Normal
+SGOT,AST,Liver enzyme level,48.76,U/L,8.0,40.0,High
+Platelet Count,PLT,Platelets help with blood clotting,178.44,10^9/L,150.0,450.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,24.5,kg/m2,18.5,24.9,Normal
+Bilirubin Total,Bili,Liver function marker,1.55,mg/dL,0.3,1.2,High
+SGOT,AST,Liver enzyme level,22.48,U/L,8.0,40.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,0.74,mg/dL,0.0,15.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",9.32,g/dL,13.0,17.0,Low
+SGOT,AST,Liver enzyme level,8.55,U/L,8.0,40.0,Normal
+Blood Urea,UREA,Another kidney function test,51.38,mg/dL,15.0,40.0,High
+Calcium,Ca,Essential mineral for bones and nerves,7.96,mg/dL,8.5,10.5,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",5.43,mg/dL,0.0,8.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,5.22,mg/dL,0.0,15.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,111.85,%,95.0,100.0,High
+TSH,Thyroid,Thyroid hormone level,1.64,µIU/mL,0.4,4.0,Normal
+SGPT,ALT,Liver enzyme level,9.98,U/L,7.0,56.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",21.04,g/dL,13.0,17.0,High
+Bilirubin Total,Bili,Liver function marker,0.31,mg/dL,0.3,1.2,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",2.87,mg/dL,0.0,5.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,22.27,kg/m2,18.5,24.9,Normal
+Vitamin D,Vit D,Important for bones,22.62,ng/mL,20.0,50.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,155.42,U/L,44.0,147.0,High
+Calcium,Ca,Essential mineral for bones and nerves,9.91,mg/dL,8.5,10.5,Normal
+LDL,LDL,Bad cholesterol,112.2,mg/dL,0.0,100.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.52,g/dL,13.0,17.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.47,%,4.0,5.6,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",1.51,mg/dL,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,178.54,mg/dL,100.0,140.0,High
+SGOT,AST,Liver enzyme level,23.94,U/L,8.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.75,mg/dL,8.5,10.5,Low
+Urine Sugar,Sugar,Checks for glucose in urine,3.26,mg/dL,0.0,15.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,54.7,mg/dL,70.0,100.0,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.32,g/dL,13.0,17.0,Low
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",117.26,mmHg,90.0,120.0,Normal
+SGOT,AST,Liver enzyme level,24.05,U/L,8.0,40.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",63.3,mmHg,60.0,80.0,Normal
+Blood Urea,UREA,Another kidney function test,50.22,mg/dL,15.0,40.0,High
+SGPT,ALT,Liver enzyme level,56.79,U/L,7.0,56.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",128.75,mmHg,90.0,120.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.93,mg/dL,0.0,5.0,High
+LDL,LDL,Bad cholesterol,40.76,mg/dL,0.0,100.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.81,%,4.0,5.6,High
+WBC Count,WBC,White blood cells help fight infection,6.89,10^9/L,4.0,11.0,Normal
+Triglycerides,TG,Type of fat in blood,59.26,mg/dL,40.0,160.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,522.25,10^9/L,150.0,450.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",1.48,mg/L,0.0,5.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",89.7,mmHg,60.0,80.0,High
+ESR,ESR,Inflammation marker in the body,16.32,mm/hr,0.0,20.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.36,mg/dL,0.3,1.2,High
+Calcium,Ca,Essential mineral for bones and nerves,6.06,mg/dL,8.5,10.5,Low
+WBC Count,WBC,White blood cells help fight infection,5.28,10^9/L,4.0,11.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,115.05,mg/dL,70.0,100.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,72.44,%,95.0,100.0,Low
+SGOT,AST,Liver enzyme level,37.53,U/L,8.0,40.0,Normal
+SGOT,AST,Liver enzyme level,20.67,U/L,8.0,40.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,26.06,kg/m2,18.5,24.9,High
+SGPT,ALT,Liver enzyme level,62.18,U/L,7.0,56.0,High
+LDL,LDL,Bad cholesterol,46.11,mg/dL,0.0,100.0,Normal
+HDL,HDL,Good cholesterol,62.42,mg/dL,40.0,60.0,High
+Platelet Count,PLT,Platelets help with blood clotting,345.47,10^9/L,150.0,450.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,102.95,mg/dL,100.0,140.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",87.35,mmHg,90.0,120.0,Low
+Uric Acid,UA,Indicates gout or kidney issues,3.61,mg/dL,3.5,7.2,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,171.77,mg/dL,100.0,140.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,60.05,U/L,44.0,147.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.58,mg/L,0.0,5.0,Normal
+Creatinine,CRE,Kidney function indicator,1.09,mg/dL,0.6,1.2,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,101.45,%,95.0,100.0,High
+LDL,LDL,Bad cholesterol,26.37,mg/dL,0.0,100.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",59.95,mmHg,60.0,80.0,Low
+SGOT,AST,Liver enzyme level,22.47,U/L,8.0,40.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,71.38,U/L,44.0,147.0,Normal
+ESR,ESR,Inflammation marker in the body,7.4,mm/hr,0.0,20.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,6.29,mg/dL,3.5,7.2,Normal
+Platelet Count,PLT,Platelets help with blood clotting,319.6,10^9/L,150.0,450.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",88.96,mmHg,60.0,80.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",2.7,mg/dL,0.0,5.0,Normal
+TSH,Thyroid,Thyroid hormone level,2.49,µIU/mL,0.4,4.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,4.07,mg/dL,0.0,15.0,Normal
+SGOT,AST,Liver enzyme level,38.63,U/L,8.0,40.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",6.01,mg/dL,0.0,5.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",1.53,mg/dL,0.0,8.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",4.02,mg/dL,0.0,5.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.27,%,4.0,5.6,Normal
+Vitamin D,Vit D,Important for bones,47.7,ng/mL,20.0,50.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.13,mg/dL,0.0,5.0,High
+Vitamin D,Vit D,Important for bones,37.93,ng/mL,20.0,50.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",85.29,mmHg,60.0,80.0,High
+SGOT,AST,Liver enzyme level,17.47,U/L,8.0,40.0,Normal
+Blood Urea,UREA,Another kidney function test,13.55,mg/dL,15.0,40.0,Low
+ESR,ESR,Inflammation marker in the body,9.88,mm/hr,0.0,20.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",47.1,mmHg,60.0,80.0,Low
+ESR,ESR,Inflammation marker in the body,17.04,mm/hr,0.0,20.0,Normal
+ESR,ESR,Inflammation marker in the body,19.26,mm/hr,0.0,20.0,Normal
+WBC Count,WBC,White blood cells help fight infection,7.57,10^9/L,4.0,11.0,Normal
+Triglycerides,TG,Type of fat in blood,152.21,mg/dL,40.0,160.0,Normal
+ESR,ESR,Inflammation marker in the body,4.21,mm/hr,0.0,20.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.47,%,4.0,5.6,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.63,mg/dL,8.5,10.5,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",17.19,g/dL,13.0,17.0,High
+LDL,LDL,Bad cholesterol,84.94,mg/dL,0.0,100.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.0,%,4.0,5.6,Normal
+Creatinine,CRE,Kidney function indicator,0.47,mg/dL,0.6,1.2,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.08,%,4.0,5.6,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,78.71,U/L,44.0,147.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",14.49,g/dL,13.0,17.0,Normal
+WBC Count,WBC,White blood cells help fight infection,4.18,10^9/L,4.0,11.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,6.52,mg/dL,8.5,10.5,Low
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,127.01,U/L,44.0,147.0,Normal
+SGPT,ALT,Liver enzyme level,5.94,U/L,7.0,56.0,Low
+WBC Count,WBC,White blood cells help fight infection,13.21,10^9/L,4.0,11.0,High
+Triglycerides,TG,Type of fat in blood,63.05,mg/dL,40.0,160.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,13.98,kg/m2,18.5,24.9,Low
+SGOT,AST,Liver enzyme level,47.13,U/L,8.0,40.0,High
+Total Cholesterol,CHOL,Total fat in blood,106.48,mg/dL,125.0,200.0,Low
+Blood Urea,UREA,Another kidney function test,46.76,mg/dL,15.0,40.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",43.01,mmHg,60.0,80.0,Low
+WBC Count,WBC,White blood cells help fight infection,5.92,10^9/L,4.0,11.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,7.23,mg/dL,3.5,7.2,High
+Bilirubin Total,Bili,Liver function marker,1.51,mg/dL,0.3,1.2,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.7,g/dL,13.0,17.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,154.06,mg/dL,100.0,140.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,32.32,U/L,44.0,147.0,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",14.03,g/dL,13.0,17.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,63.98,mg/dL,70.0,100.0,Low
+Total Cholesterol,CHOL,Total fat in blood,200.32,mg/dL,125.0,200.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,50.14,mg/dL,70.0,100.0,Low
+SGPT,ALT,Liver enzyme level,55.6,U/L,7.0,56.0,Normal
+SGOT,AST,Liver enzyme level,22.59,U/L,8.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,6.28,mm/hr,0.0,20.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,300.8,10^9/L,150.0,450.0,Normal
+ESR,ESR,Inflammation marker in the body,15.37,mm/hr,0.0,20.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,505.23,10^9/L,150.0,450.0,High
+Platelet Count,PLT,Platelets help with blood clotting,116.16,10^9/L,150.0,450.0,Low
+Total Cholesterol,CHOL,Total fat in blood,236.57,mg/dL,125.0,200.0,High
+Vitamin D,Vit D,Important for bones,62.21,ng/mL,20.0,50.0,High
+Triglycerides,TG,Type of fat in blood,164.46,mg/dL,40.0,160.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",64.88,mmHg,60.0,80.0,Normal
+WBC Count,WBC,White blood cells help fight infection,9.6,10^9/L,4.0,11.0,Normal
+Creatinine,CRE,Kidney function indicator,0.59,mg/dL,0.6,1.2,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",1.28,mg/L,0.0,5.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.48,%,4.0,5.6,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,84.64,mg/dL,70.0,100.0,Normal
+Vitamin D,Vit D,Important for bones,16.41,ng/mL,20.0,50.0,Low
+HDL,HDL,Good cholesterol,76.89,mg/dL,40.0,60.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,79.84,mg/dL,70.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,158.29,mg/dL,40.0,160.0,Normal
+Vitamin D,Vit D,Important for bones,39.73,ng/mL,20.0,50.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,2.89,%,4.0,5.6,Low
+Urine Sugar,Sugar,Checks for glucose in urine,7.98,mg/dL,0.0,15.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.01,mg/dL,3.5,7.2,Low
+Platelet Count,PLT,Platelets help with blood clotting,187.87,10^9/L,150.0,450.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,121.45,mg/dL,70.0,100.0,High
+ESR,ESR,Inflammation marker in the body,12.82,mm/hr,0.0,20.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.71,mg/dL,3.5,7.2,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,80.02,U/L,44.0,147.0,Normal
+Blood Urea,UREA,Another kidney function test,46.39,mg/dL,15.0,40.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,3.34,mg/dL,0.0,15.0,Normal
+WBC Count,WBC,White blood cells help fight infection,10.93,10^9/L,4.0,11.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",21.3,g/dL,13.0,17.0,High
+Creatinine,CRE,Kidney function indicator,1.3,mg/dL,0.6,1.2,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.28,kg/m2,18.5,24.9,Normal
+Blood Urea,UREA,Another kidney function test,18.08,mg/dL,15.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,11.6,mm/hr,0.0,20.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,8.84,mg/dL,8.5,10.5,Normal
+Platelet Count,PLT,Platelets help with blood clotting,334.48,10^9/L,150.0,450.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.46,mg/dL,0.0,8.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",120.91,mmHg,90.0,120.0,High
+Bilirubin Total,Bili,Liver function marker,0.65,mg/dL,0.3,1.2,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",19.97,g/dL,13.0,17.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",9.78,g/dL,13.0,17.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",3.21,mg/dL,0.0,8.0,Normal
+Blood Urea,UREA,Another kidney function test,46.64,mg/dL,15.0,40.0,High
+HDL,HDL,Good cholesterol,69.49,mg/dL,40.0,60.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,110.16,%,95.0,100.0,High
+HDL,HDL,Good cholesterol,59.25,mg/dL,40.0,60.0,Normal
+LDL,LDL,Bad cholesterol,4.73,mg/dL,0.0,100.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,117.53,mg/dL,100.0,140.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",154.66,mmHg,90.0,120.0,High
+Blood Urea,UREA,Another kidney function test,18.41,mg/dL,15.0,40.0,Normal
+Creatinine,CRE,Kidney function indicator,1.06,mg/dL,0.6,1.2,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",3.0,mg/dL,0.0,8.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",5.89,mg/L,0.0,5.0,High
+Platelet Count,PLT,Platelets help with blood clotting,117.84,10^9/L,150.0,450.0,Low
+SGOT,AST,Liver enzyme level,5.64,U/L,8.0,40.0,Low
+ESR,ESR,Inflammation marker in the body,24.32,mm/hr,0.0,20.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.45,mg/dL,0.0,5.0,High
+Vitamin D,Vit D,Important for bones,15.66,ng/mL,20.0,50.0,Low
+Vitamin D,Vit D,Important for bones,48.52,ng/mL,20.0,50.0,Normal
+WBC Count,WBC,White blood cells help fight infection,11.11,10^9/L,4.0,11.0,High
+Total Cholesterol,CHOL,Total fat in blood,184.9,mg/dL,125.0,200.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,87.63,U/L,44.0,147.0,Normal
+ESR,ESR,Inflammation marker in the body,21.23,mm/hr,0.0,20.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.57,%,4.0,5.6,Low
+Calcium,Ca,Essential mineral for bones and nerves,11.99,mg/dL,8.5,10.5,High
+Bilirubin Total,Bili,Liver function marker,0.29,mg/dL,0.3,1.2,Low
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",89.52,mmHg,90.0,120.0,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,109.39,mg/dL,70.0,100.0,High
+WBC Count,WBC,White blood cells help fight infection,13.27,10^9/L,4.0,11.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,4.55,mg/dL,0.0,15.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.42,mg/dL,0.0,8.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,95.69,mg/dL,125.0,200.0,Low
+Bilirubin Total,Bili,Liver function marker,1.48,mg/dL,0.3,1.2,High
+HDL,HDL,Good cholesterol,48.88,mg/dL,40.0,60.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,73.41,U/L,44.0,147.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.51,mg/dL,0.0,8.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,23.57,kg/m2,18.5,24.9,Normal
+TSH,Thyroid,Thyroid hormone level,2.62,µIU/mL,0.4,4.0,Normal
+Blood Urea,UREA,Another kidney function test,31.71,mg/dL,15.0,40.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",76.8,mmHg,60.0,80.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,168.56,mg/dL,125.0,200.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.17,mg/dL,0.0,8.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.23,mg/dL,0.0,8.0,Normal
+SGOT,AST,Liver enzyme level,7.31,U/L,8.0,40.0,Low
+Creatinine,CRE,Kidney function indicator,1.44,mg/dL,0.6,1.2,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",9.16,g/dL,13.0,17.0,Low
+Total Cholesterol,CHOL,Total fat in blood,243.54,mg/dL,125.0,200.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.94,mg/dL,0.0,5.0,High
+HDL,HDL,Good cholesterol,54.65,mg/dL,40.0,60.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",11.26,g/dL,13.0,17.0,Low
+Blood Urea,UREA,Another kidney function test,17.11,mg/dL,15.0,40.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",2.49,mg/dL,0.0,8.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",2.16,mg/dL,0.0,8.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.85,%,4.0,5.6,High
+Vitamin D,Vit D,Important for bones,46.57,ng/mL,20.0,50.0,Normal
+TSH,Thyroid,Thyroid hormone level,0.76,µIU/mL,0.4,4.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",6.17,mg/L,0.0,5.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,31.6,kg/m2,18.5,24.9,High
+ESR,ESR,Inflammation marker in the body,14.55,mm/hr,0.0,20.0,Normal
+SGOT,AST,Liver enzyme level,24.08,U/L,8.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,10.32,mm/hr,0.0,20.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,9.05,mg/dL,3.5,7.2,High
+Oxygen Saturation,SpO2,Oxygen level in blood,109.21,%,95.0,100.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,12.42,mg/dL,0.0,15.0,Normal
+HDL,HDL,Good cholesterol,45.73,mg/dL,40.0,60.0,Normal
+SGOT,AST,Liver enzyme level,26.39,U/L,8.0,40.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.7,mg/dL,0.0,8.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",2.32,mg/L,0.0,5.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,16.58,mg/dL,0.0,15.0,High
+TSH,Thyroid,Thyroid hormone level,1.69,µIU/mL,0.4,4.0,Normal
+WBC Count,WBC,White blood cells help fight infection,10.17,10^9/L,4.0,11.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,74.06,%,95.0,100.0,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",1.88,mg/L,0.0,5.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.77,mg/dL,0.0,5.0,Normal
+WBC Count,WBC,White blood cells help fight infection,10.44,10^9/L,4.0,11.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,8.36,mg/dL,0.0,15.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",5.52,mg/dL,0.0,8.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,91.59,%,95.0,100.0,Low
+HDL,HDL,Good cholesterol,73.18,mg/dL,40.0,60.0,High
+LDL,LDL,Bad cholesterol,112.28,mg/dL,0.0,100.0,High
+Platelet Count,PLT,Platelets help with blood clotting,189.35,10^9/L,150.0,450.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.54,mg/L,0.0,5.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,5.47,mg/dL,3.5,7.2,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",1.76,mg/L,0.0,5.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.69,mg/dL,8.5,10.5,Low
+TSH,Thyroid,Thyroid hormone level,5.07,µIU/mL,0.4,4.0,High
+Triglycerides,TG,Type of fat in blood,200.67,mg/dL,40.0,160.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.41,g/dL,13.0,17.0,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",2.22,mg/L,0.0,5.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,1.17,mg/dL,0.0,15.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.45,mg/dL,0.3,1.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",102.26,mmHg,60.0,80.0,High
+Total Cholesterol,CHOL,Total fat in blood,119.6,mg/dL,125.0,200.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,122.74,%,95.0,100.0,High
+Vitamin D,Vit D,Important for bones,46.63,ng/mL,20.0,50.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,12.5,mg/dL,8.5,10.5,High
+Calcium,Ca,Essential mineral for bones and nerves,13.46,mg/dL,8.5,10.5,High
+Oxygen Saturation,SpO2,Oxygen level in blood,93.54,%,95.0,100.0,Low
+LDL,LDL,Bad cholesterol,109.49,mg/dL,0.0,100.0,High
+WBC Count,WBC,White blood cells help fight infection,5.05,10^9/L,4.0,11.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,16.38,mg/dL,0.0,15.0,High
+SGPT,ALT,Liver enzyme level,23.91,U/L,7.0,56.0,Normal
+SGOT,AST,Liver enzyme level,14.27,U/L,8.0,40.0,Normal
+TSH,Thyroid,Thyroid hormone level,3.7,µIU/mL,0.4,4.0,Normal
+Triglycerides,TG,Type of fat in blood,203.28,mg/dL,40.0,160.0,High
+Platelet Count,PLT,Platelets help with blood clotting,246.78,10^9/L,150.0,450.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,29.64,kg/m2,18.5,24.9,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,123.22,U/L,44.0,147.0,Normal
+SGOT,AST,Liver enzyme level,19.64,U/L,8.0,40.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",1.2,mg/dL,0.0,8.0,Normal
+Triglycerides,TG,Type of fat in blood,181.72,mg/dL,40.0,160.0,High
+ESR,ESR,Inflammation marker in the body,16.03,mm/hr,0.0,20.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,62.4,mg/dL,70.0,100.0,Low
+Bilirubin Total,Bili,Liver function marker,0.89,mg/dL,0.3,1.2,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",3.43,mg/L,0.0,5.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.95,mg/L,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,162.49,mg/dL,100.0,140.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,179.37,U/L,44.0,147.0,High
+Creatinine,CRE,Kidney function indicator,0.91,mg/dL,0.6,1.2,Normal
+Platelet Count,PLT,Platelets help with blood clotting,503.0,10^9/L,150.0,450.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,8.87,mg/dL,0.0,15.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.11,mg/dL,0.0,8.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",3.55,mg/dL,0.0,5.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.84,%,4.0,5.6,High
+Urine Sugar,Sugar,Checks for glucose in urine,3.22,mg/dL,0.0,15.0,Normal
+SGOT,AST,Liver enzyme level,39.29,U/L,8.0,40.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.72,g/dL,13.0,17.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,569.93,10^9/L,150.0,450.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,87.91,%,95.0,100.0,Low
+WBC Count,WBC,White blood cells help fight infection,11.07,10^9/L,4.0,11.0,High
+Creatinine,CRE,Kidney function indicator,0.95,mg/dL,0.6,1.2,Normal
+SGOT,AST,Liver enzyme level,31.55,U/L,8.0,40.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,345.05,10^9/L,150.0,450.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,13.41,mg/dL,0.0,15.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.34,%,4.0,5.6,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.24,%,4.0,5.6,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",144.49,mmHg,90.0,120.0,High
+WBC Count,WBC,White blood cells help fight infection,11.63,10^9/L,4.0,11.0,High
+HDL,HDL,Good cholesterol,74.38,mg/dL,40.0,60.0,High
+Uric Acid,UA,Indicates gout or kidney issues,6.55,mg/dL,3.5,7.2,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,90.33,%,95.0,100.0,Low
+Blood Urea,UREA,Another kidney function test,20.03,mg/dL,15.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,8.11,mg/dL,8.5,10.5,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.37,mg/dL,0.0,8.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,17.85,kg/m2,18.5,24.9,Low
+Triglycerides,TG,Type of fat in blood,151.93,mg/dL,40.0,160.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,453.05,10^9/L,150.0,450.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,116.87,%,95.0,100.0,High
+LDL,LDL,Bad cholesterol,36.12,mg/dL,0.0,100.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,107.71,%,95.0,100.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.12,mg/dL,0.0,8.0,High
+ESR,ESR,Inflammation marker in the body,25.02,mm/hr,0.0,20.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,122.56,mg/dL,100.0,140.0,Normal
+Vitamin D,Vit D,Important for bones,64.76,ng/mL,20.0,50.0,High
+LDL,LDL,Bad cholesterol,60.93,mg/dL,0.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,178.46,mg/dL,40.0,160.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,169.39,U/L,44.0,147.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.51,%,4.0,5.6,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.13,mg/dL,0.0,5.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",56.75,mmHg,60.0,80.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,124.75,%,95.0,100.0,High
+Blood Urea,UREA,Another kidney function test,41.92,mg/dL,15.0,40.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,69.29,mg/dL,70.0,100.0,Low
+SGPT,ALT,Liver enzyme level,50.61,U/L,7.0,56.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,15.09,mg/dL,0.0,15.0,High
+WBC Count,WBC,White blood cells help fight infection,6.76,10^9/L,4.0,11.0,Normal
+ESR,ESR,Inflammation marker in the body,2.0,mm/hr,0.0,20.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",52.07,mmHg,60.0,80.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,120.34,10^9/L,150.0,450.0,Low
+Uric Acid,UA,Indicates gout or kidney issues,8.45,mg/dL,3.5,7.2,High
+Triglycerides,TG,Type of fat in blood,79.09,mg/dL,40.0,160.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",141.95,mmHg,90.0,120.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,90.93,%,95.0,100.0,Low
+Urine Sugar,Sugar,Checks for glucose in urine,9.33,mg/dL,0.0,15.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.56,mg/dL,0.0,5.0,Normal
+Vitamin D,Vit D,Important for bones,22.53,ng/mL,20.0,50.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,144.95,mg/dL,100.0,140.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,174.9,mg/dL,100.0,140.0,High
+Blood Urea,UREA,Another kidney function test,47.08,mg/dL,15.0,40.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,100.26,U/L,44.0,147.0,Normal
+SGPT,ALT,Liver enzyme level,42.77,U/L,7.0,56.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",5.19,mg/L,0.0,5.0,High
+Bilirubin Total,Bili,Liver function marker,1.09,mg/dL,0.3,1.2,Normal
+Vitamin D,Vit D,Important for bones,34.11,ng/mL,20.0,50.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",6.24,mg/L,0.0,5.0,High
+Blood Urea,UREA,Another kidney function test,28.43,mg/dL,15.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,6.44,mm/hr,0.0,20.0,Normal
+LDL,LDL,Bad cholesterol,93.29,mg/dL,0.0,100.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,89.82,mg/dL,125.0,200.0,Low
+Total Cholesterol,CHOL,Total fat in blood,146.84,mg/dL,125.0,200.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",154.64,mmHg,90.0,120.0,High
+WBC Count,WBC,White blood cells help fight infection,4.32,10^9/L,4.0,11.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",148.98,mmHg,90.0,120.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.66,g/dL,13.0,17.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.65,mg/dL,0.0,8.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.5,%,4.0,5.6,High
+Urine Sugar,Sugar,Checks for glucose in urine,19.28,mg/dL,0.0,15.0,High
+Platelet Count,PLT,Platelets help with blood clotting,162.6,10^9/L,150.0,450.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",20.38,g/dL,13.0,17.0,High
+WBC Count,WBC,White blood cells help fight infection,4.68,10^9/L,4.0,11.0,Normal
+SGPT,ALT,Liver enzyme level,48.09,U/L,7.0,56.0,Normal
+Triglycerides,TG,Type of fat in blood,63.36,mg/dL,40.0,160.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,11.81,mg/dL,8.5,10.5,High
+CRP,CRP,"C-reactive protein, indicates inflammation",0.55,mg/L,0.0,5.0,Normal
+ESR,ESR,Inflammation marker in the body,2.22,mm/hr,0.0,20.0,Normal
+Creatinine,CRE,Kidney function indicator,1.41,mg/dL,0.6,1.2,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",75.16,mmHg,60.0,80.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,119.05,10^9/L,150.0,450.0,Low
+HDL,HDL,Good cholesterol,29.71,mg/dL,40.0,60.0,Low
+Vitamin D,Vit D,Important for bones,60.74,ng/mL,20.0,50.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,18.41,kg/m2,18.5,24.9,Low
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",153.34,mmHg,90.0,120.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",3.89,mg/dL,0.0,5.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,433.02,10^9/L,150.0,450.0,Normal
+Triglycerides,TG,Type of fat in blood,170.9,mg/dL,40.0,160.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,2.9,%,4.0,5.6,Low
+Vitamin D,Vit D,Important for bones,62.74,ng/mL,20.0,50.0,High
+TSH,Thyroid,Thyroid hormone level,1.29,µIU/mL,0.4,4.0,Normal
+TSH,Thyroid,Thyroid hormone level,2.3,µIU/mL,0.4,4.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,235.18,mg/dL,125.0,200.0,High
+Platelet Count,PLT,Platelets help with blood clotting,310.42,10^9/L,150.0,450.0,Normal
+SGPT,ALT,Liver enzyme level,60.22,U/L,7.0,56.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",5.99,mg/dL,0.0,8.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",101.21,mmHg,60.0,80.0,High
+Creatinine,CRE,Kidney function indicator,1.35,mg/dL,0.6,1.2,High
+SGOT,AST,Liver enzyme level,39.68,U/L,8.0,40.0,Normal
+Creatinine,CRE,Kidney function indicator,0.66,mg/dL,0.6,1.2,Normal
+Calcium,Ca,Essential mineral for bones and nerves,11.73,mg/dL,8.5,10.5,High
+Blood Urea,UREA,Another kidney function test,38.29,mg/dL,15.0,40.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,21.17,kg/m2,18.5,24.9,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",155.13,mmHg,90.0,120.0,High
+WBC Count,WBC,White blood cells help fight infection,12.46,10^9/L,4.0,11.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",133.26,mmHg,90.0,120.0,High
+Uric Acid,UA,Indicates gout or kidney issues,6.28,mg/dL,3.5,7.2,Normal
+Creatinine,CRE,Kidney function indicator,0.71,mg/dL,0.6,1.2,Normal
+Bilirubin Total,Bili,Liver function marker,1.54,mg/dL,0.3,1.2,High
+Vitamin D,Vit D,Important for bones,16.33,ng/mL,20.0,50.0,Low
+Vitamin D,Vit D,Important for bones,37.39,ng/mL,20.0,50.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",58.59,mmHg,60.0,80.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,88.58,%,95.0,100.0,Low
+Bilirubin Total,Bili,Liver function marker,0.8,mg/dL,0.3,1.2,Normal
+ESR,ESR,Inflammation marker in the body,24.93,mm/hr,0.0,20.0,High
+LDL,LDL,Bad cholesterol,126.82,mg/dL,0.0,100.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",5.83,mg/L,0.0,5.0,High
+Uric Acid,UA,Indicates gout or kidney issues,3.18,mg/dL,3.5,7.2,Low
+Platelet Count,PLT,Platelets help with blood clotting,570.68,10^9/L,150.0,450.0,High
+Bilirubin Total,Bili,Liver function marker,0.34,mg/dL,0.3,1.2,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,20.03,kg/m2,18.5,24.9,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.92,mg/dL,0.0,5.0,High
+Triglycerides,TG,Type of fat in blood,161.57,mg/dL,40.0,160.0,High
+Triglycerides,TG,Type of fat in blood,157.77,mg/dL,40.0,160.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",96.46,mmHg,90.0,120.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.39,mg/dL,0.3,1.2,High
+Platelet Count,PLT,Platelets help with blood clotting,199.91,10^9/L,150.0,450.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,149.15,mg/dL,100.0,140.0,High
+Blood Urea,UREA,Another kidney function test,44.44,mg/dL,15.0,40.0,High
+Blood Urea,UREA,Another kidney function test,16.12,mg/dL,15.0,40.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,5.41,mg/dL,0.0,15.0,Normal
+SGOT,AST,Liver enzyme level,45.85,U/L,8.0,40.0,High
+SGOT,AST,Liver enzyme level,22.91,U/L,8.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,6.09,mg/dL,8.5,10.5,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",2.46,mg/L,0.0,5.0,Normal
+HDL,HDL,Good cholesterol,58.72,mg/dL,40.0,60.0,Normal
+LDL,LDL,Bad cholesterol,92.58,mg/dL,0.0,100.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.18,mg/L,0.0,5.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,10.86,mg/dL,0.0,15.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.82,mg/dL,8.5,10.5,Low
+Bilirubin Total,Bili,Liver function marker,1.46,mg/dL,0.3,1.2,High
+Calcium,Ca,Essential mineral for bones and nerves,6.59,mg/dL,8.5,10.5,Low
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",6.47,mg/dL,0.0,5.0,High
+SGOT,AST,Liver enzyme level,46.82,U/L,8.0,40.0,High
+Vitamin D,Vit D,Important for bones,15.38,ng/mL,20.0,50.0,Low
+Creatinine,CRE,Kidney function indicator,0.81,mg/dL,0.6,1.2,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",0.98,mg/L,0.0,5.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.12,mg/dL,0.0,5.0,Normal
+Triglycerides,TG,Type of fat in blood,117.49,mg/dL,40.0,160.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,542.62,10^9/L,150.0,450.0,High
+LDL,LDL,Bad cholesterol,125.81,mg/dL,0.0,100.0,High
+Platelet Count,PLT,Platelets help with blood clotting,154.21,10^9/L,150.0,450.0,Normal
+WBC Count,WBC,White blood cells help fight infection,8.13,10^9/L,4.0,11.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,96.17,U/L,44.0,147.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,29.45,kg/m2,18.5,24.9,High
+LDL,LDL,Bad cholesterol,118.94,mg/dL,0.0,100.0,High
+Uric Acid,UA,Indicates gout or kidney issues,8.41,mg/dL,3.5,7.2,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",89.36,mmHg,60.0,80.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",73.33,mmHg,90.0,120.0,Low
+SGOT,AST,Liver enzyme level,14.54,U/L,8.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,10.55,mg/dL,8.5,10.5,High
+Uric Acid,UA,Indicates gout or kidney issues,4.87,mg/dL,3.5,7.2,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,19.33,mg/dL,0.0,15.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.33,%,4.0,5.6,Normal
+SGPT,ALT,Liver enzyme level,15.77,U/L,7.0,56.0,Normal
+TSH,Thyroid,Thyroid hormone level,3.83,µIU/mL,0.4,4.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,8.57,mg/dL,3.5,7.2,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",117.79,mmHg,90.0,120.0,Normal
+TSH,Thyroid,Thyroid hormone level,1.43,µIU/mL,0.4,4.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,8.93,mg/dL,8.5,10.5,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",64.39,mmHg,60.0,80.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,159.86,10^9/L,150.0,450.0,Normal
+Vitamin D,Vit D,Important for bones,39.62,ng/mL,20.0,50.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.84,%,4.0,5.6,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,146.75,U/L,44.0,147.0,Normal
+ESR,ESR,Inflammation marker in the body,2.71,mm/hr,0.0,20.0,Normal
+Creatinine,CRE,Kidney function indicator,0.55,mg/dL,0.6,1.2,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,127.35,mg/dL,100.0,140.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,1.45,mg/dL,0.0,15.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",19.18,g/dL,13.0,17.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.76,g/dL,13.0,17.0,Low
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.28,mg/dL,0.0,5.0,Normal
+Triglycerides,TG,Type of fat in blood,114.64,mg/dL,40.0,160.0,Normal
+LDL,LDL,Bad cholesterol,73.27,mg/dL,0.0,100.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,10.42,mg/dL,8.5,10.5,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,129.12,mg/dL,70.0,100.0,High
+Bilirubin Total,Bili,Liver function marker,1.16,mg/dL,0.3,1.2,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,68.46,U/L,44.0,147.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",12.26,g/dL,13.0,17.0,Low
+TSH,Thyroid,Thyroid hormone level,3.0,µIU/mL,0.4,4.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,108.66,%,95.0,100.0,High
+LDL,LDL,Bad cholesterol,91.39,mg/dL,0.0,100.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.8,mg/L,0.0,5.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,244.02,10^9/L,150.0,450.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",65.97,mmHg,90.0,120.0,Low
+Triglycerides,TG,Type of fat in blood,89.34,mg/dL,40.0,160.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,197.04,mg/dL,125.0,200.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,77.41,mg/dL,100.0,140.0,Low
+Urine Sugar,Sugar,Checks for glucose in urine,7.44,mg/dL,0.0,15.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",10.34,mg/dL,0.0,8.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.92,%,4.0,5.6,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,145.27,U/L,44.0,147.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",18.38,g/dL,13.0,17.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",18.11,g/dL,13.0,17.0,High
+Uric Acid,UA,Indicates gout or kidney issues,6.67,mg/dL,3.5,7.2,Normal
+ESR,ESR,Inflammation marker in the body,2.51,mm/hr,0.0,20.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",13.66,g/dL,13.0,17.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.51,mg/dL,0.3,1.2,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",2.49,mg/L,0.0,5.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.38,mg/L,0.0,5.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.82,%,4.0,5.6,Low
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",105.52,mmHg,90.0,120.0,Normal
+HDL,HDL,Good cholesterol,33.98,mg/dL,40.0,60.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.03,%,4.0,5.6,Low
+Bilirubin Total,Bili,Liver function marker,1.03,mg/dL,0.3,1.2,Normal
+HDL,HDL,Good cholesterol,50.78,mg/dL,40.0,60.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,32.28,kg/m2,18.5,24.9,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",1.94,mg/dL,0.0,5.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",1.2,mg/dL,0.0,5.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,101.52,U/L,44.0,147.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,54.3,mg/dL,70.0,100.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,118.71,mg/dL,100.0,140.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,19.45,mg/dL,0.0,15.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",4.34,mg/L,0.0,5.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,8.54,mg/dL,3.5,7.2,High
+Urine Sugar,Sugar,Checks for glucose in urine,18.06,mg/dL,0.0,15.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",92.66,mmHg,90.0,120.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,7.26,%,4.0,5.6,High
+Vitamin D,Vit D,Important for bones,49.3,ng/mL,20.0,50.0,Normal
+LDL,LDL,Bad cholesterol,118.92,mg/dL,0.0,100.0,High
+Total Cholesterol,CHOL,Total fat in blood,147.65,mg/dL,125.0,200.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",2.88,mg/L,0.0,5.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.29,mg/dL,8.5,10.5,Low
+Creatinine,CRE,Kidney function indicator,1.3,mg/dL,0.6,1.2,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.67,%,4.0,5.6,High
+LDL,LDL,Bad cholesterol,52.35,mg/dL,0.0,100.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,117.04,%,95.0,100.0,High
+Calcium,Ca,Essential mineral for bones and nerves,6.63,mg/dL,8.5,10.5,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,88.54,%,95.0,100.0,Low
+Platelet Count,PLT,Platelets help with blood clotting,558.04,10^9/L,150.0,450.0,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",79.25,mmHg,60.0,80.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,119.29,mg/dL,70.0,100.0,High
+Calcium,Ca,Essential mineral for bones and nerves,6.52,mg/dL,8.5,10.5,Low
+Urine Sugar,Sugar,Checks for glucose in urine,18.9,mg/dL,0.0,15.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",4.15,mg/dL,0.0,5.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,62.95,mg/dL,70.0,100.0,Low
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,36.88,U/L,44.0,147.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,122.46,%,95.0,100.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",67.15,mmHg,90.0,120.0,Low
+SGOT,AST,Liver enzyme level,24.44,U/L,8.0,40.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,73.36,%,95.0,100.0,Low
+Vitamin D,Vit D,Important for bones,39.53,ng/mL,20.0,50.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.75,mg/dL,0.3,1.2,Normal
+HDL,HDL,Good cholesterol,45.24,mg/dL,40.0,60.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,118.71,%,95.0,100.0,High
+Triglycerides,TG,Type of fat in blood,161.48,mg/dL,40.0,160.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,27.9,kg/m2,18.5,24.9,High
+SGOT,AST,Liver enzyme level,13.43,U/L,8.0,40.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,14.47,kg/m2,18.5,24.9,Low
+CRP,CRP,"C-reactive protein, indicates inflammation",5.57,mg/L,0.0,5.0,High
+TSH,Thyroid,Thyroid hormone level,1.0,µIU/mL,0.4,4.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.76,mg/dL,0.0,8.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.17,mg/dL,0.0,5.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,71.33,%,95.0,100.0,Low
+Blood Urea,UREA,Another kidney function test,22.09,mg/dL,15.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,7.65,mg/dL,8.5,10.5,Low
+Platelet Count,PLT,Platelets help with blood clotting,363.14,10^9/L,150.0,450.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,72.29,U/L,44.0,147.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,97.62,mg/dL,100.0,140.0,Low
+Creatinine,CRE,Kidney function indicator,0.91,mg/dL,0.6,1.2,Normal
+Uric Acid,UA,Indicates gout or kidney issues,7.03,mg/dL,3.5,7.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",53.52,mmHg,60.0,80.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,100.87,%,95.0,100.0,High
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,119.19,mg/dL,70.0,100.0,High
+Triglycerides,TG,Type of fat in blood,30.2,mg/dL,40.0,160.0,Low
+LDL,LDL,Bad cholesterol,61.57,mg/dL,0.0,100.0,Normal
+ESR,ESR,Inflammation marker in the body,11.62,mm/hr,0.0,20.0,Normal
+Vitamin D,Vit D,Important for bones,25.16,ng/mL,20.0,50.0,Normal
+ESR,ESR,Inflammation marker in the body,21.68,mm/hr,0.0,20.0,High
+Uric Acid,UA,Indicates gout or kidney issues,6.21,mg/dL,3.5,7.2,Normal
+Platelet Count,PLT,Platelets help with blood clotting,519.46,10^9/L,150.0,450.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",17.83,g/dL,13.0,17.0,High
+Uric Acid,UA,Indicates gout or kidney issues,4.82,mg/dL,3.5,7.2,Normal
+Uric Acid,UA,Indicates gout or kidney issues,3.47,mg/dL,3.5,7.2,Low
+HDL,HDL,Good cholesterol,68.3,mg/dL,40.0,60.0,High
+ESR,ESR,Inflammation marker in the body,8.3,mm/hr,0.0,20.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,10.31,mg/dL,0.0,15.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,203.24,mg/dL,125.0,200.0,High
+SGPT,ALT,Liver enzyme level,20.88,U/L,7.0,56.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,4.64,mg/dL,0.0,15.0,Normal
+ESR,ESR,Inflammation marker in the body,3.33,mm/hr,0.0,20.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.05,mg/dL,0.0,8.0,Normal
+HDL,HDL,Good cholesterol,59.71,mg/dL,40.0,60.0,Normal
+HDL,HDL,Good cholesterol,57.33,mg/dL,40.0,60.0,Normal
+WBC Count,WBC,White blood cells help fight infection,5.72,10^9/L,4.0,11.0,Normal
+Triglycerides,TG,Type of fat in blood,71.66,mg/dL,40.0,160.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,86.22,mg/dL,100.0,140.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.68,%,4.0,5.6,Normal
+Uric Acid,UA,Indicates gout or kidney issues,2.52,mg/dL,3.5,7.2,Low
+HDL,HDL,Good cholesterol,72.9,mg/dL,40.0,60.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.56,mg/dL,0.0,5.0,Normal
+SGOT,AST,Liver enzyme level,8.57,U/L,8.0,40.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,4.67,mg/dL,0.0,15.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.27,%,4.0,5.6,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",70.68,mmHg,60.0,80.0,Normal
+LDL,LDL,Bad cholesterol,28.93,mg/dL,0.0,100.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,17.52,kg/m2,18.5,24.9,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.93,mg/dL,0.0,8.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.72,mg/dL,0.0,8.0,Normal
+WBC Count,WBC,White blood cells help fight infection,3.82,10^9/L,4.0,11.0,Low
+Triglycerides,TG,Type of fat in blood,103.05,mg/dL,40.0,160.0,Normal
+Vitamin D,Vit D,Important for bones,16.59,ng/mL,20.0,50.0,Low
+Oxygen Saturation,SpO2,Oxygen level in blood,67.7,%,95.0,100.0,Low
+Triglycerides,TG,Type of fat in blood,173.48,mg/dL,40.0,160.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",2.48,mg/L,0.0,5.0,Normal
+HDL,HDL,Good cholesterol,63.63,mg/dL,40.0,60.0,High
+SGOT,AST,Liver enzyme level,22.23,U/L,8.0,40.0,Normal
+Blood Urea,UREA,Another kidney function test,24.98,mg/dL,15.0,40.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,182.66,U/L,44.0,147.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,86.2,mg/dL,100.0,140.0,Low
+Body Mass Index,BMI,Measure of body fat based on height and weight,28.45,kg/m2,18.5,24.9,High
+WBC Count,WBC,White blood cells help fight infection,4.18,10^9/L,4.0,11.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,112.69,%,95.0,100.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,73.84,%,95.0,100.0,Low
+ESR,ESR,Inflammation marker in the body,4.17,mm/hr,0.0,20.0,Normal
+TSH,Thyroid,Thyroid hormone level,0.67,µIU/mL,0.4,4.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",0.96,mg/dL,0.0,5.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.4,mg/dL,0.0,8.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,24.16,kg/m2,18.5,24.9,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",1.84,mg/dL,0.0,5.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,145.14,mg/dL,100.0,140.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",116.6,mmHg,90.0,120.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,73.5,%,95.0,100.0,Low
+WBC Count,WBC,White blood cells help fight infection,8.87,10^9/L,4.0,11.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,2.11,mg/dL,0.0,15.0,Normal
+LDL,LDL,Bad cholesterol,16.83,mg/dL,0.0,100.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",60.78,mmHg,60.0,80.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",0.69,mg/L,0.0,5.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,10.12,mg/dL,8.5,10.5,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",99.84,mmHg,60.0,80.0,High
+ESR,ESR,Inflammation marker in the body,17.55,mm/hr,0.0,20.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",84.36,mmHg,60.0,80.0,High
+SGPT,ALT,Liver enzyme level,51.48,U/L,7.0,56.0,Normal
+HDL,HDL,Good cholesterol,54.03,mg/dL,40.0,60.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.44,%,4.0,5.6,Low
+WBC Count,WBC,White blood cells help fight infection,8.21,10^9/L,4.0,11.0,Normal
+WBC Count,WBC,White blood cells help fight infection,7.05,10^9/L,4.0,11.0,Normal
+Platelet Count,PLT,Platelets help with blood clotting,454.81,10^9/L,150.0,450.0,High
+Uric Acid,UA,Indicates gout or kidney issues,4.16,mg/dL,3.5,7.2,Normal
+Triglycerides,TG,Type of fat in blood,91.83,mg/dL,40.0,160.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,125.21,mg/dL,70.0,100.0,High
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",15.2,g/dL,13.0,17.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,115.21,mg/dL,70.0,100.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",4.92,mg/dL,0.0,8.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.36,mg/dL,0.3,1.2,Normal
+Vitamin D,Vit D,Important for bones,63.62,ng/mL,20.0,50.0,High
+SGOT,AST,Liver enzyme level,44.57,U/L,8.0,40.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,107.78,mg/dL,100.0,140.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",2.43,mg/dL,0.0,5.0,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",21.99,g/dL,13.0,17.0,High
+Bilirubin Total,Bili,Liver function marker,0.69,mg/dL,0.3,1.2,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.5,%,4.0,5.6,Normal
+LDL,LDL,Bad cholesterol,9.45,mg/dL,0.0,100.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,170.33,mg/dL,100.0,140.0,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,83.45,mg/dL,100.0,140.0,Low
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,70.22,U/L,44.0,147.0,Normal
+HDL,HDL,Good cholesterol,61.65,mg/dL,40.0,60.0,High
+TSH,Thyroid,Thyroid hormone level,3.55,µIU/mL,0.4,4.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,13.33,mg/dL,8.5,10.5,High
+TSH,Thyroid,Thyroid hormone level,0.76,µIU/mL,0.4,4.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,153.14,mg/dL,100.0,140.0,High
+Vitamin D,Vit D,Important for bones,29.4,ng/mL,20.0,50.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",71.95,mmHg,60.0,80.0,Normal
+Creatinine,CRE,Kidney function indicator,1.44,mg/dL,0.6,1.2,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,123.63,mg/dL,100.0,140.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,107.21,mg/dL,70.0,100.0,High
+Uric Acid,UA,Indicates gout or kidney issues,7.81,mg/dL,3.5,7.2,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,149.53,U/L,44.0,147.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.21,mg/dL,8.5,10.5,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,21.98,kg/m2,18.5,24.9,Normal
+LDL,LDL,Bad cholesterol,49.27,mg/dL,0.0,100.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,7.06,mg/dL,3.5,7.2,Normal
+Bilirubin Total,Bili,Liver function marker,1.09,mg/dL,0.3,1.2,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",10.01,g/dL,13.0,17.0,Low
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",10.35,mg/dL,0.0,8.0,High
+CRP,CRP,"C-reactive protein, indicates inflammation",4.82,mg/L,0.0,5.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.3,mg/dL,0.3,1.2,Normal
+Blood Urea,UREA,Another kidney function test,35.02,mg/dL,15.0,40.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,7.18,%,4.0,5.6,High
+CRP,CRP,"C-reactive protein, indicates inflammation",5.1,mg/L,0.0,5.0,High
+TSH,Thyroid,Thyroid hormone level,2.97,µIU/mL,0.4,4.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",4.52,mg/L,0.0,5.0,Normal
+Bilirubin Total,Bili,Liver function marker,0.95,mg/dL,0.3,1.2,Normal
+Blood Urea,UREA,Another kidney function test,24.1,mg/dL,15.0,40.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",116.62,mmHg,90.0,120.0,Normal
+SGOT,AST,Liver enzyme level,28.92,U/L,8.0,40.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,71.37,mg/dL,70.0,100.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,163.47,mg/dL,100.0,140.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.04,mg/dL,0.0,8.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,27.84,kg/m2,18.5,24.9,High
+CRP,CRP,"C-reactive protein, indicates inflammation",2.28,mg/L,0.0,5.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,69.71,mg/dL,70.0,100.0,Low
+Bilirubin Total,Bili,Liver function marker,1.52,mg/dL,0.3,1.2,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,172.7,mg/dL,100.0,140.0,High
+Calcium,Ca,Essential mineral for bones and nerves,11.74,mg/dL,8.5,10.5,High
+Creatinine,CRE,Kidney function indicator,0.88,mg/dL,0.6,1.2,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.09,mg/dL,0.0,5.0,High
+WBC Count,WBC,White blood cells help fight infection,9.96,10^9/L,4.0,11.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",9.26,mg/dL,0.0,8.0,High
+Oxygen Saturation,SpO2,Oxygen level in blood,95.51,%,95.0,100.0,Normal
+Bilirubin Total,Bili,Liver function marker,1.37,mg/dL,0.3,1.2,High
+Uric Acid,UA,Indicates gout or kidney issues,5.47,mg/dL,3.5,7.2,Normal
+SGOT,AST,Liver enzyme level,26.15,U/L,8.0,40.0,Normal
+LDL,LDL,Bad cholesterol,97.87,mg/dL,0.0,100.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.85,%,4.0,5.6,High
+Total Cholesterol,CHOL,Total fat in blood,187.08,mg/dL,125.0,200.0,Normal
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",145.14,mmHg,90.0,120.0,High
+SGOT,AST,Liver enzyme level,18.25,U/L,8.0,40.0,Normal
+ESR,ESR,Inflammation marker in the body,25.48,mm/hr,0.0,20.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,16.77,kg/m2,18.5,24.9,Low
+LDL,LDL,Bad cholesterol,31.52,mg/dL,0.0,100.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,2.94,%,4.0,5.6,Low
+Triglycerides,TG,Type of fat in blood,36.46,mg/dL,40.0,160.0,Low
+SGOT,AST,Liver enzyme level,49.79,U/L,8.0,40.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,151.62,U/L,44.0,147.0,High
+Blood Pressure Systolic,BP Sys,"Top number in BP, pressure during heartbeat",103.19,mmHg,90.0,120.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.2,%,4.0,5.6,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.51,%,4.0,5.6,Low
+Platelet Count,PLT,Platelets help with blood clotting,345.99,10^9/L,150.0,450.0,Normal
+Vitamin D,Vit D,Important for bones,43.39,ng/mL,20.0,50.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,34.07,U/L,44.0,147.0,Low
+ESR,ESR,Inflammation marker in the body,7.92,mm/hr,0.0,20.0,Normal
+ESR,ESR,Inflammation marker in the body,0.98,mm/hr,0.0,20.0,Normal
+LDL,LDL,Bad cholesterol,39.43,mg/dL,0.0,100.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,100.84,%,95.0,100.0,High
+TSH,Thyroid,Thyroid hormone level,0.49,µIU/mL,0.4,4.0,Normal
+LDL,LDL,Bad cholesterol,28.02,mg/dL,0.0,100.0,Normal
+Blood Urea,UREA,Another kidney function test,21.07,mg/dL,15.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,6.56,mg/dL,8.5,10.5,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,73.21,mg/dL,70.0,100.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,80.34,U/L,44.0,147.0,Normal
+HDL,HDL,Good cholesterol,37.17,mg/dL,40.0,60.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,12.35,mg/dL,8.5,10.5,High
+Calcium,Ca,Essential mineral for bones and nerves,10.55,mg/dL,8.5,10.5,High
+Bilirubin Total,Bili,Liver function marker,1.43,mg/dL,0.3,1.2,High
+HDL,HDL,Good cholesterol,55.7,mg/dL,40.0,60.0,Normal
+Urine Sugar,Sugar,Checks for glucose in urine,17.73,mg/dL,0.0,15.0,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",6.58,mg/dL,0.0,8.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,61.84,U/L,44.0,147.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,8.97,mg/dL,3.5,7.2,High
+WBC Count,WBC,White blood cells help fight infection,11.13,10^9/L,4.0,11.0,High
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",5.85,mg/dL,0.0,5.0,High
+Calcium,Ca,Essential mineral for bones and nerves,9.65,mg/dL,8.5,10.5,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",53.39,mmHg,60.0,80.0,Low
+HbA1c,HbA1c,Average blood sugar over 2-3 months,5.77,%,4.0,5.6,High
+ESR,ESR,Inflammation marker in the body,17.65,mm/hr,0.0,20.0,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",8.23,mg/dL,0.0,8.0,High
+WBC Count,WBC,White blood cells help fight infection,4.41,10^9/L,4.0,11.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,100.2,%,95.0,100.0,High
+ESR,ESR,Inflammation marker in the body,3.95,mm/hr,0.0,20.0,Normal
+SGOT,AST,Liver enzyme level,11.3,U/L,8.0,40.0,Normal
+LDL,LDL,Bad cholesterol,112.03,mg/dL,0.0,100.0,High
+Calcium,Ca,Essential mineral for bones and nerves,9.7,mg/dL,8.5,10.5,Normal
+Blood Urea,UREA,Another kidney function test,15.39,mg/dL,15.0,40.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,9.7,mg/dL,8.5,10.5,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",2.31,mg/dL,0.0,8.0,Normal
+LDL,LDL,Bad cholesterol,62.94,mg/dL,0.0,100.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,113.37,U/L,44.0,147.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",6.09,mg/dL,0.0,5.0,High
+SGPT,ALT,Liver enzyme level,18.23,U/L,7.0,56.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,28.34,kg/m2,18.5,24.9,High
+Blood Urea,UREA,Another kidney function test,20.39,mg/dL,15.0,40.0,Normal
+SGOT,AST,Liver enzyme level,28.69,U/L,8.0,40.0,Normal
+Triglycerides,TG,Type of fat in blood,130.25,mg/dL,40.0,160.0,Normal
+LDL,LDL,Bad cholesterol,97.52,mg/dL,0.0,100.0,Normal
+Triglycerides,TG,Type of fat in blood,202.09,mg/dL,40.0,160.0,High
+SGPT,ALT,Liver enzyme level,27.66,U/L,7.0,56.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,93.18,%,95.0,100.0,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,123.93,mg/dL,70.0,100.0,High
+Urine Sugar,Sugar,Checks for glucose in urine,8.61,mg/dL,0.0,15.0,Normal
+ESR,ESR,Inflammation marker in the body,22.68,mm/hr,0.0,20.0,High
+Uric Acid,UA,Indicates gout or kidney issues,6.46,mg/dL,3.5,7.2,Normal
+Vitamin D,Vit D,Important for bones,61.59,ng/mL,20.0,50.0,High
+Uric Acid,UA,Indicates gout or kidney issues,4.18,mg/dL,3.5,7.2,Normal
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",14.51,g/dL,13.0,17.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,3.17,%,4.0,5.6,Low
+LDL,LDL,Bad cholesterol,41.41,mg/dL,0.0,100.0,Normal
+ESR,ESR,Inflammation marker in the body,22.0,mm/hr,0.0,20.0,High
+Calcium,Ca,Essential mineral for bones and nerves,9.62,mg/dL,8.5,10.5,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",2.5,mg/dL,0.0,5.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,96.05,mg/dL,70.0,100.0,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",57.27,mmHg,60.0,80.0,Low
+TSH,Thyroid,Thyroid hormone level,0.29,µIU/mL,0.4,4.0,Low
+Hemoglobin,Hb,"Amount of hemoglobin in blood, indicates oxygen-carrying capacity",20.6,g/dL,13.0,17.0,High
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.16,%,4.0,5.6,High
+Triglycerides,TG,Type of fat in blood,122.83,mg/dL,40.0,160.0,Normal
+ESR,ESR,Inflammation marker in the body,12.77,mm/hr,0.0,20.0,Normal
+Calcium,Ca,Essential mineral for bones and nerves,6.62,mg/dL,8.5,10.5,Low
+Platelet Count,PLT,Platelets help with blood clotting,187.74,10^9/L,150.0,450.0,Normal
+Body Mass Index,BMI,Measure of body fat based on height and weight,16.3,kg/m2,18.5,24.9,Low
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,68.6,mg/dL,70.0,100.0,Low
+PP Blood Sugar,PPBS,Sugar level in blood after eating,168.47,mg/dL,100.0,140.0,High
+Calcium,Ca,Essential mineral for bones and nerves,7.53,mg/dL,8.5,10.5,Low
+Triglycerides,TG,Type of fat in blood,158.36,mg/dL,40.0,160.0,Normal
+Vitamin D,Vit D,Important for bones,40.84,ng/mL,20.0,50.0,Normal
+PP Blood Sugar,PPBS,Sugar level in blood after eating,74.49,mg/dL,100.0,140.0,Low
+Calcium,Ca,Essential mineral for bones and nerves,12.84,mg/dL,8.5,10.5,High
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",62.16,mmHg,60.0,80.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,4.84,%,4.0,5.6,Normal
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",0.83,mg/dL,0.0,8.0,Normal
+Uric Acid,UA,Indicates gout or kidney issues,5.74,mg/dL,3.5,7.2,Normal
+Blood Pressure Diastolic,BP Dia,"Bottom number in BP, pressure between beats",81.02,mmHg,60.0,80.0,High
+Vitamin D,Vit D,Important for bones,64.73,ng/mL,20.0,50.0,High
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,173.39,U/L,44.0,147.0,High
+Bilirubin Total,Bili,Liver function marker,1.45,mg/dL,0.3,1.2,High
+Urine Protein,Protein,"Checks for protein in urine, can indicate kidney problems",3.84,mg/dL,0.0,8.0,Normal
+Fasting Blood Sugar,FBS,Sugar level in blood after fasting,102.93,mg/dL,70.0,100.0,High
+Triglycerides,TG,Type of fat in blood,71.09,mg/dL,40.0,160.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",0.71,mg/L,0.0,5.0,Normal
+Urine Ketones,Ketones,"Checks for ketones in urine, may indicate diabetes or fasting",1.12,mg/dL,0.0,5.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,57.09,U/L,44.0,147.0,Normal
+WBC Count,WBC,White blood cells help fight infection,5.56,10^9/L,4.0,11.0,Normal
+Total Cholesterol,CHOL,Total fat in blood,173.9,mg/dL,125.0,200.0,Normal
+HbA1c,HbA1c,Average blood sugar over 2-3 months,6.7,%,4.0,5.6,High
+PP Blood Sugar,PPBS,Sugar level in blood after eating,107.42,mg/dL,100.0,140.0,Normal
+ESR,ESR,Inflammation marker in the body,2.16,mm/hr,0.0,20.0,Normal
+CRP,CRP,"C-reactive protein, indicates inflammation",0.56,mg/L,0.0,5.0,Normal
+SGPT,ALT,Liver enzyme level,67.41,U/L,7.0,56.0,High
+Body Mass Index,BMI,Measure of body fat based on height and weight,16.48,kg/m2,18.5,24.9,Low
+Triglycerides,TG,Type of fat in blood,70.75,mg/dL,40.0,160.0,Normal
+Alkaline Phosphatase,ALP,Enzyme related to liver and bone health,108.69,U/L,44.0,147.0,Normal
+HDL,HDL,Good cholesterol,58.58,mg/dL,40.0,60.0,Normal
+Blood Urea,UREA,Another kidney function test,36.55,mg/dL,15.0,40.0,Normal
+HDL,HDL,Good cholesterol,59.36,mg/dL,40.0,60.0,Normal
+Oxygen Saturation,SpO2,Oxygen level in blood,94.37,%,95.0,100.0,Low
+Uric Acid,UA,Indicates gout or kidney issues,2.96,mg/dL,3.5,7.2,Low

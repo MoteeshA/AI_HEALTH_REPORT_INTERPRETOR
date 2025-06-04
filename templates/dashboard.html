@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Health AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #8b5cf6;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --text: #ffffff;
+            --text-secondary: #e2e8f0;
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --navbar-bg: rgba(15, 23, 42, 0.95);
+            --gradient: linear-gradient(135deg, #2563eb, #8b5cf6);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at 20% 30%, #0f172a, #1e293b);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Particle background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary-light), transparent 70%);
+            opacity: 0.3;
+            filter: blur(1px);
+            animation: float-particle 15s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translate(100px, 100px) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+
+        /* Animated background elements */
+        .bg-element {
+            position: absolute;
+            border-radius: 50%;
+            backdrop-filter: blur(5px);
+            z-index: -1;
+            filter: drop-shadow(var(--glow));
+            mix-blend-mode: screen;
+        }
+
+        .bg-element:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            left: -150px;
+            animation: float 18s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 70%);
+        }
+
+        .bg-element:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            bottom: 50px;
+            right: 100px;
+            animation: float 14s ease-in-out infinite reverse;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+        }
+
+        .bg-element:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            right: -100px;
+            animation: float 20s ease-in-out infinite 2s;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(20px, 20px) rotate(5deg);
+            }
+            50% {
+                transform: translate(0, 40px) rotate(0deg);
+            }
+            75% {
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background: var(--navbar-bg);
+            color: white;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 100;
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.5s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 1rem 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .navbar h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .navbar:hover h1::after {
+            width: 100%;
+        }
+
+        .navbar a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            background: var(--gradient);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            letter-spacing: 1px;
+        }
+
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .navbar a:hover::before {
+            left: 100%;
+        }
+
+        .navbar a i {
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Main container */
+        .container {
+            padding: 3rem;
+            max-width: 1400px;
+            margin: auto;
+            position: relative;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+            transform: rotate(0deg);
+            transition: transform 10s linear;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .card:hover::before {
+            transform: rotate(360deg);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.3s; }
+        .card:nth-child(3) { animation-delay: 0.5s; }
+        .card:nth-child(4) { animation-delay: 0.7s; }
+
+        h2 {
+            margin-top: 0;
+            color: var(--text);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .card:hover h2::after {
+            width: 100%;
+        }
+
+        /* File input styling */
+        .file-upload {
+            position: relative;
+            margin: 1.5rem 0;
+            perspective: 1000px;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border: 2px dashed rgba(59, 130, 246, 0.5);
+            border-radius: 16px;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: rgba(15, 23, 42, 0.5);
+            transform-style: preserve-3d;
+            transform: rotateX(0deg);
+            flex-direction: column;
+            text-align: center;
+            min-height: 150px;
+        }
+
+        .file-upload-label:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: var(--primary-light);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+            transform: rotateX(5deg);
+        }
+
+        .file-upload-label i {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary-light);
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-label span {
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 10px;
+        }
+
+        .file-upload-label .file-selected {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .file-upload:hover .file-upload-label i {
+            transform: scale(1.1);
+            color: var(--accent);
+        }
+
+        .file-upload:hover .file-upload-label span {
+            letter-spacing: 0.5px;
+        }
+
+        /* Buttons */
+        button {
+            background: var(--gradient);
+            border: none;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 1rem;
+            transform: translateZ(0);
+        }
+
+        button i {
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            letter-spacing: 1px;
+        }
+
+        button:hover i {
+            transform: rotate(15deg);
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
+            transform: translateX(-100%) skewX(-15deg);
+            transition: transform 0.6s ease;
+        }
+
+        button:hover::after {
+            transform: translateX(100%) skewX(-15deg);
+        }
+
+        /* AI Output */
+        .ai-output {
+            white-space: pre-wrap;
+            margin-top: 1.5rem;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 1.5rem;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-left: 4px solid var(--primary-light);
+            animation: fadeIn 0.8s ease;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+        }
+
+        .ai-output:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--accent);
+        }
+
+        .ai-output::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent 90%, rgba(59, 130, 246, 0.1));
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typing animation for AI output */
+        .typing {
+            position: relative;
+        }
+
+        .typing::after {
+            content: '|';
+            position: absolute;
+            right: -5px;
+            animation: blink 1s infinite;
+            color: var(--primary-light);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Past summaries list */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 1.2rem;
+            margin-bottom: 0.75rem;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 4px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
+        }
+
+        li:hover {
+            background: rgba(30, 41, 59, 0.7);
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        li:hover::before {
+            transform: scaleY(1);
+        }
+
+        li strong {
+            color: var(--primary-light);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        li:hover strong {
+            color: var(--accent);
+        }
+
+        li p {
+            margin: 0.5rem 0 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        li:hover p {
+            color: var(--text);
+        }
+
+        /* Chart container */
+        .chart-container {
+            position: relative;
+            height: 350px;
+            width: 100%;
+            margin-top: 1.5rem;
+            transition: all 0.5s ease;
+        }
+
+        .chart-container:hover {
+            transform: scale(1.01);
+        }
+
+        /* Loading animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 12px;
+        }
+
+        .loading-dots div {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            animation: bounce 1.4s infinite ease-in-out;
+            box-shadow: 0 0 10px var(--primary-light);
+        }
+
+        .loading-dots div:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots div:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes bounce {
+            0%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+        }
+
+        /* Status indicators */
+        .status {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .status-normal {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.5);
+        }
+
+        .status-warning {
+            background-color: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.5);
+        }
+
+        .status-critical {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.5);
+        }
+
+        /* Floating action button */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .fab:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.7);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            .fab {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .file-upload-label {
+                padding: 1.5rem;
+                min-height: 120px;
+            }
+        }
+
+        /* Grid layout for larger screens */
+        @media (min-width: 992px) {
+            .card-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+            
+            .card-grid .card {
+                margin-bottom: 0;
+            }
+        }
+
+        /* 3D card effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(5deg) rotateX(5deg);
+        }
+
+        /* Glow effects */
+        .glow {
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--gradient);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* File upload success state */
+        .file-upload-success .file-upload-label {
+            border-color: var(--secondary);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .file-upload-success .file-upload-label i {
+            color: var(--secondary);
+        }
+
+        .file-upload-success .file-selected {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Scroll progress indicator -->
+    <div class="scroll-progress"></div>
+
+    <!-- Particle background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Animated background elements -->
+    <div class="bg-element"></div>
+    <div class="bg-element"></div>
+    <div class="bg-element"></div>
+
+    <div class="navbar" id="navbar">
+        <h1>Health AI Dashboard</h1>
+        <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <div class="container">
+
+        <div class="card card-3d">
+            <h2>Upload Health Report</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="file-upload" id="file-upload-container">
+                    <input type="file" name="health_report" id="health_report" required accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg">
+                    <label for="health_report" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span id="file-name">Drag & drop your health report or click to browse</span>
+                        <div class="file-selected">
+                            <i class="fas fa-check-circle"></i> File selected
+                        </div>
+                    </label>
+                </div>
+                <button type="submit" id="analyze-btn" class="glow">
+                    <i class="fas fa-brain"></i> Analyze Report
+                </button>
+            </form>
+        </div>
+
+        {% if ai_result %}
+        <div class="card animate__animated animate__fadeInUp card-3d">
+            <h2>AI Interpretation 
+                {% if status == 'normal' %}
+                <span class="status status-normal">NORMAL</span>
+                {% elif status == 'warning' %}
+                <span class="status status-warning">WARNING</span>
+                {% elif status == 'critical' %}
+                <span class="status status-critical">CRITICAL</span>
+                {% endif %}
+            </h2>
+            <div class="ai-output" id="ai-output">
+                {% if interpreting %}
+                <div class="typing">{{ ai_result }}</div>
+                {% else %}
+                {{ ai_result }}
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if recommendations %}
+        <div class="card animate__animated animate__fadeInUp card-3d">
+            <h2>Recommendations</h2>
+            <div class="ai-output">
+                {{ recommendations }}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="card-grid">
+            <div class="card card-3d">
+                <h2>Past Summaries</h2>
+                {% if reports %}
+                    <ul>
+                        {% for report in reports %}
+                            <li class="animate__animated animate__fadeIn" style="animation-delay: {{ loop.index * 0.1 }}s">
+                                <strong>{{ report.date_uploaded.strftime('%Y-%m-%d') }}</strong>
+                                <p>{{ report.summary[:150] }}...</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No summaries available.</p>
+                {% endif %}
+            </div>
+
+            <div class="card card-3d">
+                <h2>Health Trends</h2>
+                <div class="chart-container">
+                    <canvas id="summaryChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating action button -->
+    <div class="fab" id="fab">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Create particle background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 20 : 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 5 + 2;
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}px`;
+                particle.style.top = `${posY}px`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+        
+        // Scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrollProgress + '%';
+            
+            // Navbar effect on scroll
+            if (scrollTop > 50) {
+                document.getElementById('navbar').classList.add('scrolled');
+            } else {
+                document.getElementById('navbar').classList.remove('scrolled');
+            }
+        });
+        
+        // File upload handling
+        const fileInput = document.getElementById('health_report');
+        const fileNameDisplay = document.getElementById('file-name');
+        const fileUploadContainer = document.getElementById('file-upload-container');
+        const uploadLabel = document.querySelector('.file-upload-label');
+
+        // Display selected file name
+        fileInput.addEventListener('change', function(e) {
+            if (this.files.length > 0) {
+                fileNameDisplay.textContent = this.files[0].name;
+                fileUploadContainer.classList.add('file-upload-success');
+                
+                // Add visual feedback
+                uploadLabel.style.borderColor = 'var(--secondary)';
+                uploadLabel.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.3)';
+                setTimeout(() => {
+                    uploadLabel.style.boxShadow = '0 0 0 4px rgba(16, 185, 129, 0.1)';
+                }, 300);
+            } else {
+                fileNameDisplay.textContent = 'Drag & drop your health report or click to browse';
+                fileUploadContainer.classList.remove('file-upload-success');
+            }
+        });
+
+        // Drag and drop visual feedback
+        uploadLabel.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadLabel.style.background = 'rgba(30, 41, 59, 0.7)';
+            uploadLabel.style.borderColor = 'var(--accent)';
+            uploadLabel.style.transform = 'scale(1.02)';
+        });
+
+        uploadLabel.addEventListener('dragleave', () => {
+            uploadLabel.style.background = fileInput.files.length > 0 ? 'rgba(16, 185, 129, 0.1)' : 'rgba(15, 23, 42, 0.5)';
+            uploadLabel.style.borderColor = fileInput.files.length > 0 ? 'var(--secondary)' : 'rgba(59, 130, 246, 0.5)';
+            uploadLabel.style.transform = '';
+        });
+
+        uploadLabel.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadLabel.style.background = 'rgba(30, 41, 59, 0.7)';
+            uploadLabel.style.borderColor = 'var(--secondary)';
+            uploadLabel.style.transform = '';
+        });
+
+        // Summary Length Chart
+        const summaryLabels = [
+            {% for report in reports[::-1] %}
+                "{{ report.date_uploaded.strftime('%Y-%m-%d') }}",
+            {% endfor %}
+        ];
+
+        const summaryLengths = [
+            {% for report in reports[::-1] %}
+                {{ report.summary|length }},
+            {% endfor %}
+        ];
+
+        // Health scores (simulated for demo)
+        const healthScores = [
+            {% for report in reports[::-1] %}
+                {{ [70, 75, 80, 85, 90, 95] | random }},
+            {% endfor %}
+        ];
+
+        // Create gradient for chart
+        const ctx = document.getElementById('summaryChart').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(59, 130, 246, 0.8)');
+        gradient.addColorStop(1, 'rgba(59, 130, 246, 0.1)');
+
+        const summaryData = {
+            labels: summaryLabels,
+            datasets: [{
+                label: 'Health Score',
+                data: healthScores,
+                borderColor: 'rgba(59, 130, 246, 1)',
+                backgroundColor: gradient,
+                borderWidth: 4,
+                pointBackgroundColor: 'rgba(255, 255, 255, 1)',
+                pointBorderColor: 'rgba(59, 130, 246, 1)',
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                fill: true,
+                tension: 0.4
+            }]
+        };
+
+        const summaryConfig = {
+            type: 'line',
+            data: summaryData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                        titleColor: '#ffffff',
+                        bodyColor: '#e2e8f0',
+                        borderColor: 'rgba(59, 130, 246, 0.7)',
+                        borderWidth: 2,
+                        padding: 15,
+                        usePointStyle: true,
+                        callbacks: {
+                            label: function(context) {
+                                return `Health Score: ${context.raw}/100`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false,
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'rgba(200, 200, 255, 0.7)'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)',
+                            borderDash: [5, 5]
+                        },
+                        ticks: {
+                            color: 'rgba(200, 200, 255, 0.7)',
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        min: 0,
+                        max: 100
+                    }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutQuart'
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3,
+                        borderJoinStyle: 'round'
+                    }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('summaryChart'), summaryConfig);
+
+        // Add animation to analyze button when clicked
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const btn = document.getElementById('analyze-btn');
+            btn.innerHTML = '<i class="fas fa-cog fa-spin"></i> Analyzing...';
+            btn.style.background = 'linear-gradient(135deg, #1d4ed8, #2563eb)';
+            btn.classList.remove('glow');
+            
+            // Create a loading card while waiting for response
+            const card = document.createElement('div');
+            card.className = 'card card-3d';
+            card.innerHTML = `
+                <h2>AI Interpretation</h2>
+                <div class="loading">
+                    <div class="loading-dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            `;
+            this.parentNode.insertBefore(card, this.nextSibling);
+            
+            // Add floating particles to loading card
+            const loadingParticles = document.createElement('div');
+            loadingParticles.className = 'particles';
+            loadingParticles.style.position = 'absolute';
+            loadingParticles.style.top = '0';
+            loadingParticles.style.left = '0';
+            loadingParticles.style.width = '100%';
+            loadingParticles.style.height = '100%';
+            card.appendChild(loadingParticles);
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 4 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.opacity = '0.5';
+                
+                loadingParticles.appendChild(particle);
+            }
+        });
+
+        // Simulate typing effect for AI output
+        {% if interpreting %}
+        const aiOutput = document.getElementById('ai-output');
+        const text = aiOutput.textContent;
+        aiOutput.textContent = '';
+        
+        let i = 0;
+        const typingEffect = setInterval(() => {
+            if (i < text.length) {
+                aiOutput.textContent += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(typingEffect);
+                aiOutput.classList.remove('typing');
+                
+                // Add a completion animation
+                aiOutput.style.animation = 'pulse 1s 2';
+                setTimeout(() => {
+                    aiOutput.style.animation = '';
+                }, 2000);
+            }
+        }, 20);
+        {% endif %}
+
+        // Floating action button interaction
+        const fab = document.getElementById('fab');
+        fab.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>';
+            this.style.transform = 'scale(1.2)';
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-check"></i>';
+                this.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+                
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-robot"></i>';
+                    this.style.background = 'var(--gradient)';
+                    this.style.transform = '';
+                }, 1500);
+            }, 1000);
+        });
+
+        // Add hover effect to all cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Add parallax effect to background elements
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.bg-element').forEach((el, index) => {
+                const speed = index === 0 ? 0.02 : index === 1 ? 0.03 : 0.04;
+                const xOffset = (x - 0.5) * 100 * speed;
+                const yOffset = (y - 0.5) * 100 * speed;
+                
+                el.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+    </script>
+
+</body>
+</html>

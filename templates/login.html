@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Health AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --accent: #8b5cf6;
+      --danger: #ef4444;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --text: #ffffff;
+      --text-secondary: #e2e8f0;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --glow: 0 0 15px rgba(59, 130, 246, 0.5);
+      --gradient: linear-gradient(135deg, #2563eb, #8b5cf6);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 30%, var(--dark), #1e293b);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .main-container {
+      display: flex;
+      width: 1000px;
+      max-width: 95%;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--glass-border);
+      animation: fadeInUp 1s ease;
+      z-index: 1;
+    }
+
+    .login-container, .info-sidebar {
+      width: 50%;
+      padding: 3rem;
+    }
+
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--glass-border);
+    }
+
+    .info-sidebar {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .benefit-card {
+      background: var(--glass);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .benefit-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .benefit-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    input {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      color: var(--text);
+    }
+
+    .invalid {
+      border-color: var(--danger);
+    }
+
+    .password-toggle {
+      position: absolute;
+      top: 60%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: var(--text-secondary);
+    }
+
+    #strength-meter {
+      margin-top: 5px;
+      height: 5px;
+      border-radius: 4px;
+      background: var(--glass-border);
+      overflow: hidden;
+    }
+
+    .strength-bar {
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 16px;
+      background: var(--gradient);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn .spinner {
+      margin-left: 0.5rem;
+      display: none;
+    }
+
+    .btn.loading .spinner {
+      display: inline-block;
+    }
+
+    .motivation-quote {
+      font-style: italic;
+      font-size: 0.9rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--secondary);
+      color: var(--text-secondary);
+      margin-top: 2rem;
+    }
+
+    .link {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .link a {
+      color: var(--primary-light);
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .link a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+      .login-container, .info-sidebar {
+        width: 100%;
+        padding: 2rem;
+      }
+    }
+
+    /* === Background Animations (from register.html) === */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-light), transparent 70%);
+      opacity: 0.3;
+      filter: blur(1px);
+      animation: float-particle 20s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes float-particle {
+      0% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+      50% { opacity: 0.1; }
+      100% { transform: translate(100px, 100px) rotate(360deg); opacity: 0.3; }
+    }
+
+    .floating-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      filter: blur(1px);
+      animation: float 15s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+    }
+
+    .bg-element {
+      position: absolute;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      z-index: 0;
+      mix-blend-mode: screen;
+    }
+
+    .bg-element:nth-child(1) {
+      width: 400px;
+      height: 400px;
+      top: -150px;
+      left: -150px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 70%);
+      animation: float 18s ease-in-out infinite;
+    }
+
+    .bg-element:nth-child(2) {
+      width: 250px;
+      height: 250px;
+      bottom: 50px;
+      right: 100px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+      animation: float 14s ease-in-out infinite reverse;
+    }
+
+    .bg-element:nth-child(3) {
+      width: 300px;
+      height: 300px;
+      top: 40%;
+      right: -100px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%);
+      animation: float 20s ease-in-out infinite 2s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle background -->
+  <div id="particles"></div>
+
+  <!-- Blurred background elements -->
+  <div class="bg-element"></div>
+  <div class="bg-element"></div>
+  <div class="bg-element"></div>
+
+  <!-- Floating shapes -->
+  <div class="floating-shapes">
+    <div class="shape" style="width: 120px; height: 120px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="shape" style="width: 180px; height: 180px; top: 70%; left: 80%; animation-delay: 2s;"></div>
+    <div class="shape" style="width: 80px; height: 80px; top: 60%; left: 30%; animation-delay: 4s;"></div>
+    <div class="shape" style="width: 100px; height: 100px; top: 30%; left: 60%; animation-delay: 1s;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="login-container">
+      <h2 style="margin-bottom: 2rem;">Welcome Back</h2>
+      <form id="login-form" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+          {{ form.email.label }}
+          {{ form.email(size=32, placeholder="Email Address") }}
+        </div>
+        <div class="form-group">
+          {{ form.password.label }}
+          <div style="position: relative;">
+            {{ form.password(size=32, placeholder="Password", id="password") }}
+            <i class="fas fa-eye password-toggle" id="toggle-password"></i>
+          </div>
+          <div id="strength-meter"><div class="strength-bar" id="strength-bar" style="width: 0;"></div></div>
+        </div>
+        <button type="submit" class="btn" id="submit-btn">
+          Login <i class="fas fa-spinner fa-spin spinner"></i>
+        </button>
+      </form>
+      <div class="link">
+        <p>New to Health AI? <a href="{{ url_for('register') }}">Create an account</a></p>
+      </div>
+    </div>
+    <div class="info-sidebar">
+      <h2>AI-Powered Health</h2>
+      <div class="benefit-card">
+        <h3><i class="fas fa-brain"></i> Smart Diagnostics</h3>
+        <p>AI analyzes your health data with 98% accuracy to detect issues early.</p>
+      </div>
+      <div class="benefit-card">
+        <h3><i class="fas fa-heartbeat"></i> Personalized Plans</h3>
+        <p>Get custom recommendations based on your lifestyle and goals.</p>
+      </div>
+      <div class="benefit-card">
+        <h3><i class="fas fa-shield-alt"></i> Predictive Prevention</h3>
+        <p>Stay ahead of health risks with AI-powered forecasts.</p>
+      </div>
+      <div class="motivation-quote">
+        “The first wealth is health. Our AI helps you protect it every day.”
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Particle generation
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const count = window.innerWidth < 768 ? 30 : 80;
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 6 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 15 + 10;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}px`;
+        particle.style.top = `${posY}px`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    createParticles();
+
+    // Password toggle & strength
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('toggle-password');
+    const strengthBar = document.getElementById('strength-bar');
+    const submitBtn = document.getElementById('submit-btn');
+    const form = document.getElementById('login-form');
+
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+      togglePassword.classList.toggle('fa-eye');
+      togglePassword.classList.toggle('fa-eye-slash');
+    });
+
+    passwordInput.addEventListener('input', () => {
+      const value = passwordInput.value;
+      let strength = 0;
+      if (value.length >= 6) strength++;
+      if (/[A-Z]/.test(value)) strength++;
+      if (/[0-9]/.test(value)) strength++;
+      if (/[^A-Za-z0-9]/.test(value)) strength++;
+      const percent = (strength / 4) * 100;
+      strengthBar.style.width = percent + '%';
+      strengthBar.style.background = percent < 40 ? '#ef4444' : percent < 75 ? '#facc15' : '#10b981';
+    });
+
+    form.addEventListener('submit', (e) => {
+      let valid = true;
+      const emailInput = form.querySelector('[name="email"]');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(emailInput.value)) {
+        emailInput.classList.add('invalid');
+        valid = false;
+      } else {
+        emailInput.classList.remove('invalid');
+      }
+
+      if (passwordInput.value.length < 6) {
+        passwordInput.classList.add('invalid');
+        valid = false;
+      } else {
+        passwordInput.classList.remove('invalid');
+      }
+
+      if (!valid) {
+        e.preventDefault();
+        return;
+      }
+
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+    });
+  </script>
+</body>
+</html>
