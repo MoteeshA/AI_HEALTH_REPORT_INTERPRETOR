@@ -1,0 +1,68 @@
+import os
+import fitz  # PyMuPDF
+from openai import OpenAI, OpenAIError
+
+# Initialize OpenAI client with your API key
+#client = OpenAI(api_key="")
+#sk-proj-hRRSWMAE3wZf0OiuSz0RWjbdjSRze1_vPK4OhJfXf0GmCerHp2e_mHFuIXMVT9cwghqr-TQ2XzT3BlbkFJrALvNXkDN3nkRlYXS0D4NUd-
+#XVUlx9JkD4qckarAv8JgL72bVJlXjiqoajxSJ1kF9hwMWiyyYA
+# Function to extract text from PDF
+def extract_text_from_pdf(file_path):
+    try:
+        doc = fitz.open(file_path)
+        text = ""
+        for page in doc:
+            text += page.get_text()
+        return text.strip()
+    except Exception as e:
+        return f"Failed to extract PDF text: {e}"
+
+# Unified function to interpret health report
+def interpret_file(file_path):
+    try:
+        ext = os.path.splitext(file_path)[1].lower()
+
+        # Extract content from the file
+        if ext == '.pdf':
+            content = extract_text_from_pdf(file_path)
+        else:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+
+        # Construct prompt for OpenAI
+        prompt = (
+    f"Here is a health report:\n\n{content}\n\n"
+    "Please do the following:\n"
+    "1. Summarize the report in laymen language about 10 lines.\n"
+    "2. Identify key medical or technical terms and explain them in layman's terms in detail.\n"
+    "3. Provide 3-5 natural remedies or food recommendations to improve health based on this report.\n\n"
+    "Return the response in this format:\n"
+    "Summary:\n<summary here>\n\nRecommendations:\n<recommendations here>"
+
+)
+
+
+        # Call the OpenAI API
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo-0125",
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+
+        content = response.choices[0].message.content.strip()
+
+        # Split output into summary and recommendations
+        if "Recommendations:" in content:
+            summary_part = content.split("Recommendations:")[0].replace("Summary:", "").strip()
+            recommendations_part = content.split("Recommendations:")[1].strip()
+        else:
+            summary_part = content.strip()
+            recommendations_part = "No recommendations section found."
+
+        return summary_part, recommendations_part
+
+    except OpenAIError as e:
+        return f"OpenAI API error: {e}", ""
+    except Exception as e:
+        return f"Error processing file: {e}", ""
