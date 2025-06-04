@@ -7,15 +7,12 @@
 <img width="1279" alt="Screenshot 2025-06-04 at 5 15 57 PM" src="https://github.com/user-attachments/assets/8c2bc89b-fdf3-40ea-bcbd-2199642f4bf2" />
 
 ````markdown
-<h1 align="center">🧠 AI Health Report Interpretor</h1>
-<p align="center">
-  <b>Instant AI-powered analysis of medical reports</b> <br>
-  Your intelligent health companion for diagnostics, insights & preventive care.
-</p>
+🧠 AI Health Report Interpretor
+Instant AI-powered analysis of medical reports
+Your intelligent health companion for diagnostics, insights & preventive care.
+
 
 <p align="center">
-  <img src="screenshots/dashboard.png" alt="Dashboard Preview" width="800"/>
-</p>
 
 ---
 
@@ -50,14 +47,6 @@ Generates:
 ### 🛡️ Predictive Prevention
 
 Alerts users of possible health risks early — before symptoms appear.
-
----
-
-## 📸 App Screens
-
-| Login/Register             | Upload Report               | AI Interpretation                   |
-| -------------------------- | --------------------------- | ----------------------------------- |
-| ![](screenshots/login.png) | ![](screenshots/upload.png) | ![](screenshots/interpretation.png) |
 
 ---
 
