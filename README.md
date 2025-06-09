@@ -139,14 +139,3 @@ MIT License — use freely, improve freely, but do give credit ⭐
 
 ---
 
-```
-
----
-
-### 🔥 Pro Tips:
-- Add your screenshots inside a `screenshots/` folder and rename them to: `login.png`, `upload.png`, `dashboard.png`, etc.
-- You can add animated GIFs using [LICEcap](https://www.cockos.com/licecap/) or Screen Studio to replace static images.
-- Want a deploy-to-Render/Vercel badge? Let me know and I’ll include that too.
-
-
-```
