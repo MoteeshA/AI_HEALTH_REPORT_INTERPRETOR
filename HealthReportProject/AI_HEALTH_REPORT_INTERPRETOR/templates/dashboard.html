@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Health AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#0b1020; --sidebar:#0c1326; --surface:#101931; --surface-2:#0f172a;
+      --text:#e8eefc; --muted:#9fb3d9; --border:rgba(255,255,255,.08);
+      --accent:#22d3ee; --accent-2:#8b5cf6; --ok:#34d399; --warn:#f59e0b; --bad:#ef4444;
+      --ring: rgba(34,211,238,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Poppins,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+
+    a{color:inherit;text-decoration:none}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--border);
+      background:linear-gradient(180deg,var(--surface),var(--surface-2));color:var(--text);
+      padding:.7rem 1rem;border-radius:.8rem;cursor:pointer;transition:.15s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border-color:transparent}
+    .btn.ghost{background:transparent}
+    /* NEW: danger button */
+    .btn.danger{border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.12);color:#fecaca}
+    .btn.danger:hover{filter:brightness(1.05)}
+
+    .pill{font-size:.8rem;padding:.25rem .6rem;border:1px solid var(--border);border-radius:999px}
+
+    /* Layout */
+    .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .sidebar{
+      position:sticky;top:0;height:100vh;background:linear-gradient(180deg,var(--sidebar),#0a1224 55%,#091020);
+      border-right:1px solid var(--border);padding:18px 16px;display:flex;flex-direction:column;gap:18px
+    }
+    .brand{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.3px}
+    .brand .logo{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent) 0%, var(--accent-2) 100%)}
+    .navsec{margin-top:8px}
+    .navitem{display:flex;align-items:center;gap:.7rem;padding:.65rem .7rem;border-radius:.6rem;color:var(--muted)}
+    .navitem:hover,.navitem.active{background:rgba(255,255,255,.06);color:var(--text)}
+    .navfoot{margin-top:auto;display:grid;gap:10px}
+
+    .main{display:grid;grid-template-rows:auto 1fr;min-width:0}
+    .topbar{
+      position:sticky;top:0;z-index:5;background:rgba(15,23,42,.9);
+      border-bottom:1px solid var(--border);backdrop-filter:blur(10px)
+    }
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px 12px 22px}
+
+    .content{padding:24px}
+    .container{max-width:1200px;margin:0 auto}
+
+    /* Sections & cards */
+    .section{scroll-margin-top:80px;margin-bottom:22px}
+    .section h1{font-size:1.25rem;margin:0 0 12px 0}
+    .grid{display:grid;gap:16px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    .card{background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:14px;padding:16px}
+    .muted{color:var(--muted)}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .grow{flex:1}
+    .file{display:flex;gap:10px;align-items:center;border:1px dashed var(--border);padding:14px;border-radius:12px;background:#0b1220}
+    input[type="file"]{accent-color:var(--accent)}
+    select,textarea,input[type="text"]{width:100%;background:#0b1220;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px}
+    textarea{min-height:120px}
+    .ai-output{white-space:pre-wrap;border:1px solid var(--border);background:#0b1220;padding:12px;border-radius:10px}
+    .log{white-space:pre-wrap;background:#0b1220;border:1px solid var(--border);border-radius:10px;padding:10px;min-height:90px;max-height:260px;overflow:auto}
+    .status{display:inline-block;font-size:.75rem;font-weight:700;padding:4px 8px;border-radius:999px;border:1px solid var(--border);margin-left:8px}
+    .status-normal{color:var(--ok);border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.12)}
+    .status-warning{color:var(--warn);border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.12)}
+    .status-critical{color:var(--bad);border-color:rgba(239,68,68,.35);background:rgba(239,68,68,.12)}
+
+    /* Canvas */
+    canvas{width:100%;height:320px}
+    #trends .grid{grid-template-columns:1fr 1fr}
+    @media (max-width: 1060px){ #trends .grid{grid-template-columns:1fr} }
+
+    /* Expandable summaries */
+    .sum-toolbar{display:flex;gap:10px;margin-bottom:8px}
+    details.summary-item{background:#0b1220;border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin:10px 0}
+    details.summary-item > summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px}
+    details.summary-item > summary::-webkit-details-marker{display:none}
+    .sum-date{font-weight:700;margin-right:6px}
+    .sum-snippet{color:var(--muted)}
+    .sum-body{white-space:pre-wrap;margin-top:10px}
+
+    /* Focus ring */
+    .btn:focus, input:focus, select:focus, textarea:focus, summary:focus{outline:none;box-shadow:0 0 0 4px var(--ring)}
+  </style>
+</head>
+<body>
+  <script>
+    // expose/persist context id for JS; persist for voice Q&A
+    window.CONTEXT_ID = "{{ context_id or '' }}";
+    if (window.CONTEXT_ID) localStorage.setItem('health_ctx_id', window.CONTEXT_ID);
+    else window.CONTEXT_ID = localStorage.getItem('health_ctx_id') || "";
+  </script>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo"><i class="fa-solid fa-heart-pulse"></i></div>
+        <div>Health AI</div>
+      </div>
+
+      <nav class="navsec">
+        <a class="navitem active" href="#upload"><i class="fa-regular fa-file"></i><span>Upload & Analyze</span></a>
+        <a class="navitem" href="#interpretation"><i class="fa-solid fa-brain"></i><span>Interpretation</span></a>
+        <a class="navitem" href="#voice"><i class="fa-solid fa-microphone"></i><span>Voice Assistant</span></a>
+        <a class="navitem" href="#history"><i class="fa-regular fa-clock"></i><span>Past Summaries</span></a>
+        <a class="navitem" href="#trends"><i class="fa-solid fa-chart-line"></i><span>Trends</span></a>
+      </nav>
+
+      <div class="navfoot">
+        <a class="btn ghost" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div style="display:flex;align-items:center;gap:10px">
+            <i class="fa-solid fa-house"></i>
+            <strong>Dashboard</strong>
+          </div>
+          <div class="row">
+            <a class="btn" href="#voice"><i class="fa-solid fa-microphone-lines"></i> Ask by Voice</a>
+            <a class="btn primary" href="#upload"><i class="fa-solid fa-upload"></i> Analyze New Report</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="container">
+
+          <!-- Upload + Analyze -->
+          <section id="upload" class="section card">
+            <h1>Upload Health Report</h1>
+            <form method="POST" enctype="multipart/form-data" class="grid" style="gap:12px">
+              <div class="file">
+                <i class="fas fa-file-medical"></i>
+                <input type="file" name="health_report" id="health_report" required accept=".pdf,.txt" />
+              </div>
+              <div class="row">
+                <button class="btn primary" id="analyze-btn"><i class="fas fa-brain"></i><span>Analyze Report</span></button>
+                <span class="muted" style="align-self:center">PDF or TXT only. The voice assistant will answer using the latest analyzed report.</span>
+              </div>
+            </form>
+          </section>
+
+          {% if ai_result %}
+          <section id="interpretation" class="section card">
+            <h1>
+              AI Interpretation
+              {% if status == 'normal' %}<span class="status status-normal">NORMAL</span>{% endif %}
+              {% if status == 'warning' %}<span class="status status-warning">WARNING</span>{% endif %}
+              {% if status == 'critical' %}<span class="status status-critical">CRITICAL</span>{% endif %}
+            </h1>
+            <div class="ai-output" id="ai-output">{{ ai_result | trim }}</div>
+          </section>
+          {% endif %}
+
+          {% if recommendations %}
+          <section class="section card">
+            <h1>Recommendations</h1>
+            <div class="ai-output">{{ recommendations | trim }}</div>
+          </section>
+          {% endif %}
+
+          <!-- Voice Assistant -->
+          <section id="voice" class="section card">
+            <h1>Voice Assistant</h1>
+            <div class="row" style="margin-bottom:10px">
+              <button class="btn" id="micBtn"><i class="fas fa-microphone"></i><span id="micBtnTxt">Start Mic</span></button>
+              <span class="pill" id="micStatus">Idle</span>
+              <select id="langSel" class="grow">
+                <option value="">Auto language (browser)</option>
+                <option value="en-IN">English (India)</option>
+                <option value="en-US">English (US)</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="te-IN">Telugu</option>
+                <option value="ta-IN">Tamil</option>
+                <option value="mr-IN">Marathi</option>
+                <option value="bn-IN">Bengali</option>
+              </select>
+            </div>
+
+            <div class="grid grid-2">
+              <div class="card" style="padding:12px">
+                <div class="muted" style="margin-bottom:6px">You said</div>
+                <div class="log">
+                  <div id="finalText" style="font-weight:700"></div>
+                  <div id="interimText" class="muted"></div>
+                  <div id="confLine" class="muted" style="margin-top:6px;font-size:.9rem"></div>
+                </div>
+              </div>
+              <div class="card" style="padding:12px">
+                <div class="muted" style="margin-bottom:6px">Assistant</div>
+                <div class="log" id="botLog"></div>
+              </div>
+            </div>
+
+            <div id="editWrap" style="display:none;margin-top:10px">
+              <textarea id="youEdit" placeholder="Edit your question…"></textarea>
+              <div class="row" style="margin-top:8px">
+                <button class="btn" id="sendBtn"><i class="fas fa-paper-plane"></i><span>Send</span></button>
+                <button class="btn" id="cancelEditBtn"><i class="fas fa-times"></i><span>Cancel</span></button>
+              </div>
+            </div>
+
+            <audio id="player" preload="auto" playsinline></audio>
+            <div id="srStatus" class="sr-only" aria-live="polite"></div>
+          </section>
+
+          <!-- Past + Trends -->
+          <section id="history" class="section card">
+            <h1>Past Summaries</h1>
+            {% if reports %}
+              <div class="sum-toolbar">
+                <button class="btn" id="expandAll"><i class="fa-solid fa-plus"></i> Expand all</button>
+                <button class="btn" id="collapseAll"><i class="fa-solid fa-minus"></i> Collapse all</button>
+              </div>
+              <div id="summariesList">
+                {% for report in reports %}
+                  {% set date_str = report.date_uploaded.strftime('%Y-%m-%d') %}
+                  {% set full = (report.summary or '') %}
+                  {% set snippet = (full[:140] ~ ('…' if full|length > 140 else '')) %}
+                  <details class="summary-item" data-report-id="{{ report.id }}">
+                    <summary>
+                      <span class="sum-date">{{ date_str }}</span>
+                      <span class="sum-snippet">{{ snippet }}</span>
+                      <!-- NEW: delete button aligned to the right -->
+                      <button type="button"
+                              class="btn danger delete-btn"
+                              data-id="{{ report.id }}"
+                              style="margin-left:auto"
+                              title="Delete this summary">
+                        <i class="fa-solid fa-trash-can"></i> Delete
+                      </button>
+                    </summary>
+                    <div class="sum-body">{{ full }}</div>
+                  </details>
+                {% endfor %}
+              </div>
+            {% else %}
+              <div class="muted">No summaries yet.</div>
+            {% endif %}
+          </section>
+
+          <section id="trends" class="section card">
+            <h1>Health Trends</h1>
+            <div id="noTrendsNote" class="muted" style="display:none;margin-bottom:10px">Upload a few reports to see trends.</div>
+            <div class="grid">
+              <div><canvas id="reportsOverTime"></canvas></div>
+              <div><canvas id="statusDistribution"></canvas></div>
+              <div><canvas id="conditionsBar"></canvas></div>
+              <div><canvas id="highLowStacked"></canvas></div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // --------- Sidebar active state ----------
+    const links = [...document.querySelectorAll('.navitem')];
+    const sects = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const setActive = () => {
+      let idx = 0, fromTop = window.scrollY + 100;
+      sects.forEach((s,i)=>{ if(s && s.offsetTop <= fromTop) idx = i; });
+      links.forEach((l,i)=> l.classList.toggle('active', i===idx));
+    };
+    window.addEventListener('scroll', setActive); setActive();
+
+    // --------- Expand/Collapse all for summaries ----------
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    const allDetails = () => [...document.querySelectorAll('details.summary-item')];
+    expandAllBtn?.addEventListener('click', ()=> allDetails().forEach(d=> d.open = true));
+    collapseAllBtn?.addEventListener('click', ()=> allDetails().forEach(d=> d.open = false));
+
+    // --------- Normalize numbered points in AI output ----------
+    (function normalizeAIList(){
+      const el = document.getElementById('ai-output');
+      if (!el) return;
+      const lines = (el.textContent || "").replace(/\r\n/g,"\n").split("\n").map(l=>l.trim());
+      const items = lines.filter(l => /^\d+\.\s+/.test(l));
+      if (items.length >= 3) {
+        const ol = document.createElement('ol');
+        items.forEach(l => {
+          const li = document.createElement('li'); li.textContent = l.replace(/^\d+\.\s+/, "");
+          ol.appendChild(li);
+        });
+        el.innerHTML = ""; el.appendChild(ol);
+      } else {
+        el.textContent = lines.join("\n");
+      }
+    })();
+
+    // --------- Build reports array safely (real data) ----------
+    const reportsData = [
+      {% for r in reports %}
+        {{ {'date': r.date_uploaded.strftime('%Y-%m-%d'), 'summary': (r.summary or '')} | tojson }},
+      {% endfor %}
+    ];
+    if (!reportsData || reportsData.length === 0){
+      const note = document.getElementById('noTrendsNote');
+      if (note) note.style.display = 'block';
+    }
+
+    // Helpers for charts
+    function inferStatus(text){
+      const t = (text||'').toLowerCase();
+      if (/(critical|severe|urgent|icu|very high|dangerously high|panic)/.test(t)) return 'critical';
+      if (/(elevated|high|low|abnormal|insufficient|deficiency|borderline|anemia|infection)/.test(t)) return 'warning';
+      if (/(normal|within range|no significant abnormality|stable|adequate)/.test(t)) return 'normal';
+      return 'warning';
+    }
+    const conditionDict = [
+      'anemia','diabetes','hypertension','cholesterol','triglycerides','hdl','ldl','thyroid','tsh','t3','t4',
+      'vitamin d','vitamin b12','liver','kidney','creatinine','uric acid','infection','pcv','mcv','hb','hemoglobin'
+    ];
+    function countConditions(summaries){
+      const counts = {};
+      const reMap = conditionDict.map(k => [k, new RegExp(`\\b${k.replace(' ','\\s*')}\\b`, 'i')]);
+      summaries.forEach(txt=>{
+        reMap.forEach(([k,re])=>{ if(re.test(txt||'')) counts[k]=(counts[k]||0)+1; });
+      });
+      return counts;
+    }
+    function countHighLow(summaries){
+      const buckets = { High:0, Low:0, Normal:0 };
+      summaries.forEach(txt=>{
+        const t = (txt||'').toLowerCase();
+        if (/\b(high|elevated|above range)\b/.test(t)) buckets.High++;
+        else if (/\b(low|decreased|below range|deficient)\b/.test(t)) buckets.Low++;
+        else if (/\b(normal|within range|adequate|stable)\b/.test(t)) buckets.Normal++;
+      });
+      return buckets;
+    }
+    function groupByDay(data){
+      const map = {};
+      data.forEach(r=>{ const k = r.date; map[k] = (map[k]||0) + 1; });
+      const entries = Object.entries(map).sort((a,b)=> a[0].localeCompare(b[0]));
+      return { labels: entries.map(e=>e[0]), values: entries.map(e=>e[1]) };
+    }
+
+    // --------- Render Charts ----------
+    const c1 = document.getElementById('reportsOverTime');
+    const c2 = document.getElementById('statusDistribution');
+    const c3 = document.getElementById('conditionsBar');
+    const c4 = document.getElementById('highLowStacked');
+
+    if (c1 && c2 && c3 && c4){
+      const byDay = groupByDay(reportsData);
+      const summaries = reportsData.map(r=>r.summary||'');
+      const statuses = reportsData.map(r => inferStatus(r.summary));
+      const statusCounts = statuses.reduce((acc,s)=> (acc[s]=(acc[s]||0)+1, acc), {});
+      const condCounts = countConditions(summaries);
+      const highLow = countHighLow(summaries);
+
+      new Chart(c1.getContext('2d'), {
+        type: 'line',
+        data: { labels: byDay.labels, datasets: [{ label: 'Reports per day', data: byDay.values, tension:.35, borderWidth:3, pointRadius:3, fill:false, borderColor:'rgba(34,211,238,1)' }]},
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+
+      const sdLabels = ['normal','warning','critical'].filter(k => statusCounts[k]);
+      const sdValues = sdLabels.map(k => statusCounts[k]);
+      new Chart(c2.getContext('2d'), {
+        type: 'doughnut',
+        data: { labels: sdLabels.map(s=>s.toUpperCase()), datasets: [{ data: sdValues }] },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom' } } }
+      });
+
+      const condEntries = Object.entries(condCounts).sort((a,b)=>b[1]-a[1]).slice(0,8);
+      new Chart(c3.getContext('2d'), {
+        type: 'bar',
+        data: { labels: condEntries.map(e=>e[0].toUpperCase()), datasets: [{ label: 'Mentions', data: condEntries.map(e=>e[1]) }] },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+
+      new Chart(c4.getContext('2d'), {
+        type: 'bar',
+        data: { labels: ['Findings'], datasets: [
+          { label: 'High/Elevated', data: [highLow.High] },
+          { label: 'Low/Deficient', data: [highLow.Low] },
+          { label: 'Normal/Within range', data: [highLow.Normal] }
+        ]},
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom' } }, scales:{ x:{ stacked:true }, y:{ stacked:true, beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+    }
+
+    // --------- Delete a summary (AJAX) ----------
+    document.querySelectorAll('.delete-btn').forEach(btn=>{
+      btn.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        e.stopPropagation(); // prevent <details> toggle
+        const id = btn.getAttribute('data-id');
+        if (!id) return;
+
+        const ok = confirm('Delete this summary permanently?');
+        if (!ok) return;
+
+        try{
+          const res = await fetch(`/report/${id}/delete`, { method: 'POST' });
+          if(!res.ok){
+            let msg = `HTTP ${res.status}`;
+            try{ const j=await res.json(); if(j.error) msg=j.error; }catch{}
+            throw new Error(msg);
+          }
+          // remove from DOM then reload so charts refresh
+          const wrap = btn.closest('details.summary-item');
+          if (wrap) wrap.remove();
+          location.reload();
+        }catch(err){
+          alert('Failed to delete: ' + (err.message || 'Unknown error'));
+        }
+      });
+    });
+
+    // --------- Voice Assistant ----------
+    const micBtn = document.getElementById('micBtn');
+    const micBtnTxt = document.getElementById('micBtnTxt');
+    const micStatus = document.getElementById('micStatus');
+    const langSel = document.getElementById('langSel');
+    const finalText = document.getElementById('finalText');
+    const interimText = document.getElementById('interimText');
+    const confLine = document.getElementById('confLine');
+    const botLog = document.getElementById('botLog');
+    const editWrap = document.getElementById('editWrap');
+    const youEdit = document.getElementById('youEdit');
+    const sendBtn = document.getElementById('sendBtn');
+    const cancelEditBtn = document.getElementById('cancelEditBtn');
+    const player = document.getElementById('player');
+
+    const synth = window.speechSynthesis;
+    let recog = null, isListening = false, isSpeaking = false, currentFetchCtrl = null;
+
+    const State = Object.freeze({ IDLE:'IDLE', LISTENING:'LISTENING', PROCESSING:'PROCESSING', PLAYING:'PLAYING' });
+    let state = State.IDLE;
+
+    function setState(s){
+      state = s;
+      if (s === State.IDLE){ micBtnTxt.textContent = 'Start Mic'; micStatus.textContent='Idle'; }
+      if (s === State.LISTENING){ micBtnTxt.textContent = 'Stop Mic'; micStatus.textContent='Listening…'; }
+      if (s === State.PROCESSING){ micBtnTxt.textContent = 'Processing…'; micStatus.textContent='Thinking…'; }
+      if (s === State.PLAYING){ micBtnTxt.textContent = 'Stop'; micStatus.textContent='Speaking…'; }
+    }
+    setState(State.IDLE);
+
+    function showEditor(text){ editWrap.style.display = 'block'; youEdit.value = text || ''; youEdit.focus(); }
+    function hideEditor(){ editWrap.style.display = 'none'; }
+    function getSpoken(){ return (finalText.textContent || interimText.textContent || "").trim(); }
+
+    function startListening(){
+      if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){
+        micStatus.textContent = 'Use Chrome/Edge for mic'; return;
+      }
+      const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recog = new Ctor();
+      recog.lang = langSel.value || navigator.language || 'en-IN';
+      recog.interimResults = true; recog.continuous = true; recog.maxAlternatives = 1;
+      finalText.textContent = ''; interimText.textContent = ''; confLine.textContent = '';
+      isListening = true; setState(State.LISTENING);
+
+      let confs = [];
+      recog.onresult = (ev)=>{
+        let f = finalText.textContent, inter = '';
+        for (let i = ev.resultIndex; i < ev.results.length; i++){
+          const r = ev.results[i], a = r[0];
+          if (r.isFinal){ f = (f + ' ' + a.transcript).trim(); confs.push(a.confidence); }
+          else inter += a.transcript;
+        }
+        finalText.textContent = f; interimText.textContent = inter;
+        if (confs.length){ const avg = confs.reduce((a,b)=>a+b,0)/confs.length; confLine.textContent = `Confidence: ${(avg*100).toFixed(1)}%`; }
+      };
+      recog.onerror = (e)=>{ micStatus.textContent = `Error: ${e.error||'unknown'}`; try{recog.stop()}catch{}; isListening=false; setState(State.IDLE); };
+      recog.onend = ()=>{ isListening=false; if (state===State.LISTENING) setState(State.IDLE); };
+      try{ recog.start(); }catch{}
+    }
+    function stopListening(){ try{recog&&recog.stop()}catch{}; isListening=false; }
+
+    async function askTextWithContext(text, timeoutMs=20000){
+      const ctxId = window.CONTEXT_ID || localStorage.getItem('health_ctx_id') || "";
+      if (!ctxId) throw new Error("Please analyze a report first.");
+      const ctrl = new AbortController(); currentFetchCtrl = ctrl;
+      const t = setTimeout(()=>ctrl.abort('timeout'), timeoutMs);
+      try{
+        const res = await fetch('/ask-text', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ text, context_id: ctxId }), signal: ctrl.signal
+        });
+        if (!res.ok){ let msg = `HTTP ${res.status}`; try{ const j=await res.json(); if(j.error) msg=j.error }catch{}; throw new Error(msg); }
+        return await res.json(); // { reply, audio_url }
+      } finally { clearTimeout(t); currentFetchCtrl = null; }
+    }
+
+    async function speakFallback(text){
+      if (!('speechSynthesis' in window)) return;
+      setState(State.PLAYING);
+      return new Promise((resolve)=>{
+        const u = new SpeechSynthesisUtterance(text); u.rate=1; u.pitch=1;
+        u.onstart=()=>{isSpeaking=true}; u.onend=()=>{isSpeaking=false; setState(State.IDLE); resolve();};
+        synth.speak(u);
+      });
+    }
+
+    async function handleQuery(text){
+      if (!text){ botLog.textContent = 'Nothing to send.'; return; }
+      setState(State.PROCESSING);
+      botLog.textContent += (botLog.textContent ? "\n" : "") + "You: " + text + "\nAI: Thinking...";
+      try{
+        const data = await askTextWithContext(text);
+        botLog.textContent = botLog.textContent.replace(/AI: Thinking\.\.\.$/, 'AI: ' + (data.reply || '(no reply)'));
+        if (data.audio_url){
+          player.src = data.audio_url; setState(State.PLAYING);
+          try{ await player.play(); }catch{ await speakFallback(data.reply || ''); return; }
+          player.onended = ()=> setState(State.IDLE);
+        } else {
+          await speakFallback(data.reply || '');
+        }
+      }catch(e){
+        botLog.textContent = botLog.textContent.replace(/AI: Thinking\.\.\.$/, `AI: Error: ${e.message}`);
+        await speakFallback("Sorry, I hit an error.");
+      }
+    }
+
+    function afterStop(){
+      const said = getSpoken();
+      if (!said){ botLog.textContent = 'You didn’t say anything.'; setState(State.IDLE); return; }
+      showEditor(said);
+      setState(State.IDLE);
+    }
+
+    micBtn.addEventListener('click', ()=>{
+      if (state === State.PLAYING){
+        try{ player.pause(); player.currentTime=0; }catch{}
+        if (isSpeaking) try{ window.speechSynthesis.cancel(); }catch{} isSpeaking=false;
+        setState(State.IDLE); return;
+      }
+      if (isListening){ stopListening(); afterStop(); }
+      else{
+        const ctx = window.CONTEXT_ID || localStorage.getItem('health_ctx_id') || "";
+        if (!ctx){ alert("Please analyze a report first."); return; }
+        startListening();
+      }
+    });
+
+    sendBtn.addEventListener('click', ()=>{
+      const text = (youEdit.value||"").trim();
+      hideEditor(); handleQuery(text);
+    });
+    cancelEditBtn.addEventListener('click', ()=>{ hideEditor(); setState(State.IDLE); });
+
+    // analyze button small feedback
+    document.querySelector('#upload form')?.addEventListener('submit', ()=>{
+      const btn = document.getElementById('analyze-btn'); btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Analyzing…';
+    });
+  });
+  </script>
+</body>
+</html>

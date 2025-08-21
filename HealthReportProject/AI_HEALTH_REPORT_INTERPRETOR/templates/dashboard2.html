@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Health AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --secondary: #10b981;
+      --accent: #8b5cf6;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+      --light: #f8fafc;
+      --dark: #0f172a;
+      --text: #ffffff;
+      --text-secondary: #e2e8f0;
+      --card-bg: rgba(15, 23, 42, 0.7);
+      --navbar-bg: rgba(15, 23, 42, 0.95);
+      --gradient: linear-gradient(135deg, #2563eb, #8b5cf6);
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --glow: 0 0 15px rgba(59, 130, 246, 0.5);
+      --ok: #34d399;
+      --bad: #ef4444;
+      --muted: #9fb3d9;
+      --border: rgba(255,255,255,.08);
+      --ring: rgba(34,211,238,.25);
+    }
+    
+    * {
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 20% 30%, #0f172a, #1e293b);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Particle background */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--primary-light), transparent 70%);
+      opacity: 0.3;
+      filter: blur(1px);
+      animation: float-particle 15s infinite linear;
+    }
+
+    @keyframes float-particle {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.1;
+      }
+      100% {
+        transform: translate(100px, 100px) rotate(360deg);
+        opacity: 0.3;
+      }
+    }
+
+    /* Animated background elements */
+    .bg-element {
+      position: absolute;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      z-index: -1;
+      filter: drop-shadow(var(--glow));
+      mix-blend-mode: screen;
+    }
+
+    .bg-element:nth-child(1) {
+      width: 400px;
+      height: 400px;
+      top: -150px;
+      left: -150px;
+      animation: float 18s ease-in-out infinite;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent 70%);
+    }
+
+    .bg-element:nth-child(2) {
+      width: 250px;
+      height: 250px;
+      bottom: 50px;
+      right: 100px;
+      animation: float 14s ease-in-out infinite reverse;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
+    }
+
+    .bg-element:nth-child(3) {
+      width: 300px;
+      height: 300px;
+      top: 40%;
+      right: -100px;
+      animation: float 20s ease-in-out infinite 2s;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15), transparent 70%);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(20px, 20px) rotate(5deg);
+      }
+      50% {
+        transform: translate(0, 40px) rotate(0deg);
+      }
+      75% {
+        transform: translate(-20px, 20px) rotate(-5deg);
+      }
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--navbar-bg);
+      color: white;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 100;
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.5s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 1rem 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: linear-gradient(to right, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+
+    .navbar h1::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: var(--gradient);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+    .navbar:hover h1::after {
+      width: 100%;
+    }
+
+    .navbar a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      background: var(--gradient);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navbar a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      letter-spacing: 1px;
+    }
+
+    .navbar a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .navbar a:hover::before {
+      left: 100%;
+    }
+
+    .navbar a i {
+      font-size: 0.9em;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar a:hover i {
+      transform: translateX(3px);
+    }
+
+    /* Main container */
+    .container {
+      padding: 3rem;
+      max-width: 1400px;
+      margin: auto;
+      position: relative;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      margin-bottom: 2rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--glass-border);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeInUp 0.8s forwards;
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+      transform: rotate(0deg);
+      transition: transform 10s linear;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+
+    .card:hover::before {
+      transform: rotate(360deg);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.3s; }
+    .card:nth-child(3) { animation-delay: 0.5s; }
+    .card:nth-child(4) { animation-delay: 0.7s; }
+
+    h2 {
+      margin-top: 0;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+    .card:hover h2::after {
+      width: 100%;
+    }
+
+    /* File input styling */
+    .file-upload {
+      position: relative;
+      margin: 1.5rem 0;
+      perspective: 1000px;
+    }
+
+    .file-upload input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-upload-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      border: 2px dashed rgba(59, 130, 246, 0.5);
+      border-radius: 16px;
+      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+      background: rgba(15, 23, 42, 0.5);
+      transform-style: preserve-3d;
+      transform: rotateX(0deg);
+      flex-direction: column;
+      text-align: center;
+      min-height: 150px;
+    }
+
+    .file-upload-label:hover {
+      background: rgba(30, 41, 59, 0.7);
+      border-color: var(--primary-light);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+      transform: rotateX(5deg);
+    }
+
+    .file-upload-label i {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: var(--primary-light);
+      transition: all 0.3s ease;
+    }
+
+    .file-upload-label span {
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 10px;
+    }
+
+    .file-upload-label .file-selected {
+      color: var(--secondary);
+      font-weight: 600;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .file-upload:hover .file-upload-label i {
+      transform: scale(1.1);
+      color: var(--accent);
+    }
+
+    .file-upload:hover .file-upload-label span {
+      letter-spacing: 0.5px;
+    }
+
+    /* Buttons */
+    button, .btn {
+      background: var(--gradient);
+      border: none;
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-top: 1.5rem;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      font-size: 1rem;
+      transform: translateZ(0);
+      text-decoration: none;
+    }
+
+    button i, .btn i {
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover, .btn:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      letter-spacing: 1px;
+    }
+
+    button:hover i, .btn:hover i {
+      transform: rotate(15deg);
+    }
+
+    button:active, .btn:active {
+      transform: translateY(2px);
+    }
+
+    button::after, .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
+      transform: translateX(-100%) skewX(-15deg);
+      transition: transform 0.6s ease;
+    }
+
+    button:hover::after, .btn:hover::after {
+      transform: translateX(100%) skewX(-15deg);
+    }
+
+    /* AI Output */
+    .ai-output {
+      white-space: pre-wrap;
+      margin-top: 1.5rem;
+      background: rgba(15, 23, 42, 0.5);
+      padding: 1.5rem;
+      border-radius: 16px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-left: 4px solid var(--primary-light);
+      animation: fadeIn 0.8s ease;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .ai-output:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--accent);
+    }
+
+    .ai-output::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 90%, rgba(59, 130, 246, 0.1));
+      pointer-events: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Typing animation for AI output */
+    .typing {
+      position: relative;
+    }
+
+    .typing::after {
+      content: '|';
+      position: absolute;
+      right: -5px;
+      animation: blink 1s infinite;
+      color: var(--primary-light);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Past summaries list */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 1.2rem;
+      margin-bottom: 0.75rem;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 12px;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border-left: 4px solid transparent;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    li::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gradient);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s ease;
+    }
+
+    li:hover {
+      background: rgba(30, 41, 59, 0.7);
+      transform: translateX(10px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    li:hover::before {
+      transform: scaleY(1);
+    }
+
+    li strong {
+      color: var(--primary-light);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    li:hover strong {
+      color: var(--accent);
+    }
+
+    li p {
+      margin: 0.5rem 0 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    li:hover p {
+      color: var(--text);
+    }
+
+    /* Chart container */
+    .chart-container {
+      position: relative;
+      height: 350px;
+      width: 100%;
+      margin-top: 1.5rem;
+      transition: all 0.5s ease;
+    }
+
+    .chart-container:hover {
+      transform: scale(1.01);
+    }
+
+    /* Loading animation */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .loading-dots {
+      display: flex;
+      gap: 12px;
+    }
+
+    .loading-dots div {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      animation: bounce 1.4s infinite ease-in-out;
+      box-shadow: 0 0 10px var(--primary-light);
+    }
+
+    .loading-dots div:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dots div:nth-child(2) { animation-delay: -0.16s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+    }
+
+    /* Status indicators */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .status-normal {
+      background-color: rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+    }
+
+    .status-warning {
+      background-color: rgba(245, 158, 11, 0.2);
+      color: #f59e0b;
+      border: 1px solid rgba(245, 158, 11, 0.5);
+    }
+
+    .status-critical {
+      background-color: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.5);
+    }
+
+    /* Floating action button */
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background: var(--gradient);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .fab:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 15px 35px rgba(37, 99, 235, 0.7);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      .navbar {
+        padding: 1rem 1.5rem;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      .fab {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+      }
+
+      .file-upload-label {
+        padding: 1.5rem;
+        min-height: 120px;
+      }
+    }
+
+    /* Grid layout for larger screens */
+    @media (min-width: 992px) {
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+      
+      .card-grid .card {
+        margin-bottom: 0;
+      }
+    }
+
+    /* 3D card effect */
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+    }
+
+    .card-3d:hover {
+      transform: rotateY(5deg) rotateX(5deg);
+    }
+
+    /* Glow effects */
+    .glow {
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+      }
+      to {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+      }
+    }
+
+    /* Scroll indicator */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: var(--gradient);
+      z-index: 1000;
+      transition: width 0.1s ease;
+    }
+
+    /* File upload success state */
+    .file-upload-success .file-upload-label {
+      border-color: var(--secondary);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .file-upload-success .file-upload-label i {
+      color: var(--secondary);
+    }
+
+    .file-upload-success .file-selected {
+      display: block;
+    }
+
+    /* Voice Assistant Styles */
+    .voice-assistant {
+      margin-top: 1.5rem;
+    }
+
+    .voice-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .voice-controls .btn {
+      margin-top: 0;
+    }
+
+    .log-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .log-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .log-box {
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 16px;
+      padding: 1rem;
+      min-height: 120px;
+      max-height: 260px;
+      overflow: auto;
+      border: 1px solid var(--glass-border);
+    }
+
+    .log-title {
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Summary items */
+    .summary-item {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 10px 0;
+    }
+
+    .summary-header {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 8px;
+    }
+
+    .sum-date {
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .sum-snippet {
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .sum-body {
+      white-space: pre-wrap;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    /* Danger button */
+    .btn.danger {
+      background: linear-gradient(135deg, var(--danger), #dc2626);
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+    }
+
+    .btn.danger:hover {
+      background: linear-gradient(135deg, #dc2626, var(--danger));
+      box-shadow: 0 15px 30px rgba(239, 68, 68, 0.6);
+    }
+
+    /* Focus ring */
+    .btn:focus, input:focus, select:focus, textarea:focus, summary:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // expose/persist context id for JS; persist for voice Q&A
+    window.CONTEXT_ID = "{{ context_id or '' }}";
+    if (window.CONTEXT_ID) localStorage.setItem('health_ctx_id', window.CONTEXT_ID);
+    else window.CONTEXT_ID = localStorage.getItem('health_ctx_id') || "";
+  </script>
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress"></div>
+
+  <!-- Particle background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Animated background elements -->
+  <div class="bg-element"></div>
+  <div class="bg-element"></div>
+  <div class="bg-element"></div>
+
+  <div class="navbar" id="navbar">
+    <h1>Health AI Dashboard</h1>
+    <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="container">
+    <!-- Upload + Analyze -->
+    <section id="upload" class="card card-3d">
+      <h2>Upload Health Report</h2>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="file-upload" id="file-upload-container">
+          <input type="file" name="health_report" id="health_report" required accept=".pdf,.txt">
+          <label for="health_report" class="file-upload-label">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <span id="file-name">Drag & drop your health report or click to browse</span>
+            <div class="file-selected">
+              <i class="fas fa-check-circle"></i> File selected
+            </div>
+          </label>
+        </div>
+        <button type="submit" id="analyze-btn" class="glow">
+          <i class="fas fa-brain"></i> Analyze Report
+        </button>
+      </form>
+    </section>
+
+    {% if ai_result %}
+    <section id="interpretation" class="card card-3d">
+      <h2>
+        AI Interpretation
+        {% if status == 'normal' %}<span class="status status-normal">NORMAL</span>{% endif %}
+        {% if status == 'warning' %}<span class="status status-warning">WARNING</span>{% endif %}
+        {% if status == 'critical' %}<span class="status status-critical">CRITICAL</span>{% endif %}
+      </h2>
+      <div class="ai-output" id="ai-output">{{ ai_result | trim }}</div>
+    </section>
+    {% endif %}
+
+    {% if recommendations %}
+    <section class="card card-3d">
+      <h2>Recommendations</h2>
+      <div class="ai-output">{{ recommendations | trim }}</div>
+    </section>
+    {% endif %}
+
+    <!-- Voice Assistant -->
+    <section id="voice" class="card card-3d">
+      <h2>Voice Assistant</h2>
+      <div class="voice-assistant">
+        <div class="voice-controls">
+          <button class="btn" id="micBtn"><i class="fas fa-microphone"></i><span id="micBtnTxt">Start Mic</span></button>
+          <span class="status" id="micStatus">Idle</span>
+          <select id="langSel" class="btn" style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--glass-border);">
+            <option value="">Auto language (browser)</option>
+            <option value="en-IN">English (India)</option>
+            <option value="en-US">English (US)</option>
+            <option value="hi-IN">Hindi</option>
+            <option value="te-IN">Telugu</option>
+            <option value="ta-IN">Tamil</option>
+            <option value="mr-IN">Marathi</option>
+            <option value="bn-IN">Bengali</option>
+          </select>
+        </div>
+
+        <div class="log-container">
+          <div>
+            <div class="log-title">You said</div>
+            <div class="log-box">
+              <div id="finalText" style="font-weight:700"></div>
+              <div id="interimText" style="color: var(--muted);"></div>
+              <div id="confLine" style="margin-top:6px;font-size:.9rem; color: var(--muted);"></div>
+            </div>
+          </div>
+          <div>
+            <div class="log-title">Assistant</div>
+            <div class="log-box" id="botLog"></div>
+          </div>
+        </div>
+
+        <div id="editWrap" style="display:none;margin-top:10px">
+          <textarea id="youEdit" placeholder="Edit your question…" style="width:100%; background:rgba(15, 23, 42, 0.5); color:var(--text); border:1px solid var(--glass-border); border-radius:10px; padding:10px; margin-bottom:10px;"></textarea>
+          <div class="voice-controls">
+            <button class="btn" id="sendBtn"><i class="fas fa-paper-plane"></i><span>Send</span></button>
+            <button class="btn" id="cancelEditBtn"><i class="fas fa-times"></i><span>Cancel</span></button>
+          </div>
+        </div>
+
+        <audio id="player" preload="auto" playsinline></audio>
+        <div id="srStatus" class="sr-only" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Past + Trends -->
+    <div class="card-grid">
+      <section id="history" class="card card-3d">
+        <h2>Past Summaries</h2>
+        {% if reports %}
+          <div class="voice-controls">
+            <button class="btn" id="expandAll"><i class="fa-solid fa-plus"></i> Expand all</button>
+            <button class="btn" id="collapseAll"><i class="fa-solid fa-minus"></i> Collapse all</button>
+          </div>
+          <div id="summariesList">
+            {% for report in reports %}
+              {% set date_str = report.date_uploaded.strftime('%Y-%m-%d') %}
+              {% set full = (report.summary or '') %}
+              {% set snippet = (full[:140] ~ ('…' if full|length > 140 else '')) %}
+              <div class="summary-item">
+                <div class="summary-header" onclick="this.parentElement.querySelector('.sum-body').style.display = this.parentElement.querySelector('.sum-body').style.display === 'none' ? 'block' : 'none'">
+                  <span class="sum-date">{{ date_str }}</span>
+                  <span class="sum-snippet">{{ snippet }}</span>
+                  <button type="button"
+                          class="btn danger delete-btn"
+                          data-id="{{ report.id }}"
+                          style="margin-left:auto"
+                          title="Delete this summary">
+                    <i class="fa-solid fa-trash-can"></i> Delete
+                  </button>
+                </div>
+                <div class="sum-body" style="display: none;">{{ full }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div style="color: var(--muted);">No summaries yet.</div>
+        {% endif %}
+      </section>
+
+      <section id="trends" class="card card-3d">
+        <h2>Health Trends</h2>
+        <div id="noTrendsNote" style="color: var(--muted); display:none;margin-bottom:10px">Upload a few reports to see trends.</div>
+        <div class="chart-container">
+          <canvas id="reportsOverTime"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="statusDistribution"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="conditionsBar"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="highLowStacked"></canvas>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Floating action button -->
+  <div class="fab" id="fab">
+    <i class="fas fa-robot"></i>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Create particle background
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = window.innerWidth < 768 ? 20 : 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random properties
+        const size = Math.random() * 5 + 2;
+        const posX = Math.random() * window.innerWidth;
+        const posY = Math.random() * window.innerHeight;
+        const delay = Math.random() * 5;
+        const duration = Math.random() * 10 + 10;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}px`;
+        particle.style.top = `${posY}px`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    }
+    
+    // Initialize particles
+    createParticles();
+    
+    // Scroll progress indicator
+    window.addEventListener('scroll', function() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollProgress = (scrollTop / scrollHeight) * 100;
+      document.querySelector('.scroll-progress').style.width = scrollProgress + '%';
+      
+      // Navbar effect on scroll
+      if (scrollTop > 50) {
+        document.getElementById('navbar').classList.add('scrolled');
+      } else {
+        document.getElementById('navbar').classList.remove('scrolled');
+      }
+    });
+
+    // File upload handling
+    const fileInput = document.getElementById('health_report');
+    const fileNameDisplay = document.getElementById('file-name');
+    const fileUploadContainer = document.getElementById('file-upload-container');
+    const uploadLabel = document.querySelector('.file-upload-label');
+
+    // Display selected file name
+    fileInput.addEventListener('change', function(e) {
+      if (this.files.length > 0) {
+        fileNameDisplay.textContent = this.files[0].name;
+        fileUploadContainer.classList.add('file-upload-success');
+        
+        // Add visual feedback
+        uploadLabel.style.borderColor = 'var(--secondary)';
+        uploadLabel.style.boxShadow = '0 0 0 2px rgba(16, 185, 129, 0.3)';
+        setTimeout(() => {
+          uploadLabel.style.boxShadow = '0 0 0 4px rgba(16, 185, 129, 0.1)';
+        }, 300);
+      } else {
+        fileNameDisplay.textContent = 'Drag & drop your health report or click to browse';
+        fileUploadContainer.classList.remove('file-upload-success');
+      }
+    });
+
+    // Drag and drop visual feedback
+    uploadLabel.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      uploadLabel.style.background = 'rgba(30, 41, 59, 0.7)';
+      uploadLabel.style.borderColor = 'var(--accent)';
+      uploadLabel.style.transform = 'scale(1.02)';
+    });
+
+    uploadLabel.addEventListener('dragleave', () => {
+      uploadLabel.style.background = fileInput.files.length > 0 ? 'rgba(16, 185, 129, 0.1)' : 'rgba(15, 23, 42, 0.5)';
+      uploadLabel.style.borderColor = fileInput.files.length > 0 ? 'var(--secondary)' : 'rgba(59, 130, 246, 0.5)';
+      uploadLabel.style.transform = '';
+    });
+
+    uploadLabel.addEventListener('drop', (e) => {
+      e.preventDefault();
+      uploadLabel.style.background = 'rgba(30, 41, 59, 0.7)';
+      uploadLabel.style.borderColor = 'var(--secondary)';
+      uploadLabel.style.transform = '';
+    });
+
+    // --------- Expand/Collapse all for summaries ----------
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    
+    expandAllBtn?.addEventListener('click', ()=> {
+      document.querySelectorAll('.sum-body').forEach(el => el.style.display = 'block');
+    });
+    
+    collapseAllBtn?.addEventListener('click', ()=> {
+      document.querySelectorAll('.sum-body').forEach(el => el.style.display = 'none');
+    });
+
+    // --------- Normalize numbered points in AI output ----------
+    (function normalizeAIList(){
+      const el = document.getElementById('ai-output');
+      if (!el) return;
+      const lines = (el.textContent || "").replace(/\r\n/g,"\n").split("\n").map(l=>l.trim());
+      const items = lines.filter(l => /^\d+\.\s+/.test(l));
+      if (items.length >= 3) {
+        const ol = document.createElement('ol');
+        items.forEach(l => {
+          const li = document.createElement('li'); li.textContent = l.replace(/^\d+\.\s+/, "");
+          ol.appendChild(li);
+        });
+        el.innerHTML = ""; el.appendChild(ol);
+      } else {
+        el.textContent = lines.join("\n");
+      }
+    })();
+
+    // --------- Build reports array safely (real data) ----------
+    const reportsData = [
+      {% for r in reports %}
+        {{ {'date': r.date_uploaded.strftime('%Y-%m-%d'), 'summary': (r.summary or '')} | tojson }},
+      {% endfor %}
+    ];
+    if (!reportsData || reportsData.length === 0){
+      const note = document.getElementById('noTrendsNote');
+      if (note) note.style.display = 'block';
+    }
+
+    // Helpers for charts
+    function inferStatus(text){
+      const t = (text||'').toLowerCase();
+      if (/(critical|severe|urgent|icu|very high|dangerously high|panic)/.test(t)) return 'critical';
+      if (/(elevated|high|low|abnormal|insufficient|deficiency|borderline|anemia|infection)/.test(t)) return 'warning';
+      if (/(normal|within range|no significant abnormality|stable|adequate)/.test(t)) return 'normal';
+      return 'warning';
+    }
+    const conditionDict = [
+      'anemia','diabetes','hypertension','cholesterol','triglycerides','hdl','ldl','thyroid','tsh','t3','t4',
+      'vitamin d','vitamin b12','liver','kidney','creatinine','uric acid','infection','pcv','mcv','hb','hemoglobin'
+    ];
+    function countConditions(summaries){
+      const counts = {};
+      const reMap = conditionDict.map(k => [k, new RegExp(`\\b${k.replace(' ','\\s*')}\\b`, 'i')]);
+      summaries.forEach(txt=>{
+        reMap.forEach(([k,re])=>{ if(re.test(txt||'')) counts[k]=(counts[k]||0)+1; });
+      });
+      return counts;
+    }
+    function countHighLow(summaries){
+      const buckets = { High:0, Low:0, Normal:0 };
+      summaries.forEach(txt=>{
+        const t = (txt||'').toLowerCase();
+        if (/\b(high|elevated|above range)\b/.test(t)) buckets.High++;
+        else if (/\b(low|decreased|below range|deficient)\b/.test(t)) buckets.Low++;
+        else if (/\b(normal|within range|adequate|stable)\b/.test(t)) buckets.Normal++;
+      });
+      return buckets;
+    }
+    function groupByDay(data){
+      const map = {};
+      data.forEach(r=>{ const k = r.date; map[k] = (map[k]||0) + 1; });
+      const entries = Object.entries(map).sort((a,b)=> a[0].localeCompare(b[0]));
+      return { labels: entries.map(e=>e[0]), values: entries.map(e=>e[1]) };
+    }
+
+    // --------- Render Charts ----------
+    const c1 = document.getElementById('reportsOverTime');
+    const c2 = document.getElementById('statusDistribution');
+    const c3 = document.getElementById('conditionsBar');
+    const c4 = document.getElementById('highLowStacked');
+
+    if (c1 && c2 && c3 && c4){
+      const byDay = groupByDay(reportsData);
+      const summaries = reportsData.map(r=>r.summary||'');
+      const statuses = reportsData.map(r => inferStatus(r.summary));
+      const statusCounts = statuses.reduce((acc,s)=> (acc[s]=(acc[s]||0)+1, acc), {});
+      const condCounts = countConditions(summaries);
+      const highLow = countHighLow(summaries);
+
+      // Create gradient for chart
+      const ctx = c1.getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+      gradient.addColorStop(0, 'rgba(59, 130, 246, 0.8)');
+      gradient.addColorStop(1, 'rgba(59, 130, 246, 0.1)');
+
+      new Chart(c1.getContext('2d'), {
+        type: 'line',
+        data: { 
+          labels: byDay.labels, 
+          datasets: [{ 
+            label: 'Reports per day', 
+            data: byDay.values, 
+            tension:.35, 
+            borderWidth:3, 
+            pointRadius:3, 
+            fill:true, 
+            backgroundColor: gradient,
+            borderColor:'rgba(34,211,238,1)'
+          }]
+        },
+        options: { 
+          responsive:true, 
+          maintainAspectRatio:false, 
+          plugins:{ legend:{ display:false } }, 
+          scales:{ 
+            y:{ beginAtZero:true, ticks:{ precision:0 } 
+          } 
+        } 
+      }
+      });
+
+      const sdLabels = ['normal','warning','critical'].filter(k => statusCounts[k]);
+      const sdValues = sdLabels.map(k => statusCounts[k]);
+      new Chart(c2.getContext('2d'), {
+        type: 'doughnut',
+        data: { 
+          labels: sdLabels.map(s=>s.toUpperCase()), 
+          datasets: [{ 
+            data: sdValues,
+            backgroundColor: [
+              'rgba(16, 185, 129, 0.8)',
+              'rgba(245, 158, 11, 0.8)',
+              'rgba(239, 68, 68, 0.8)'
+            ]
+          }] 
+        },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom' } } }
+      });
+
+      const condEntries = Object.entries(condCounts).sort((a,b)=>b[1]-a[1]).slice(0,8);
+      new Chart(c3.getContext('2d'), {
+        type: 'bar',
+        data: { 
+          labels: condEntries.map(e=>e[0].toUpperCase()), 
+          datasets: [{ 
+            label: 'Mentions', 
+            data: condEntries.map(e=>e[1]),
+            backgroundColor: 'rgba(59, 130, 246, 0.8)'
+          }] 
+        },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+
+      new Chart(c4.getContext('2d'), {
+        type: 'bar',
+        data: { 
+          labels: ['Findings'], 
+          datasets: [
+            { label: 'High/Elevated', data: [highLow.High], backgroundColor: 'rgba(245, 158, 11, 0.8)' },
+            { label: 'Low/Deficient', data: [highLow.Low], backgroundColor: 'rgba(239, 68, 68, 0.8)' },
+            { label: 'Normal/Within range', data: [highLow.Normal], backgroundColor: 'rgba(16, 185, 129, 0.8)' }
+          ]
+        },
+        options: { responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom' } }, scales:{ x:{ stacked:true }, y:{ stacked:true, beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+    }
+
+    // --------- Delete a summary (AJAX) ----------
+    document.querySelectorAll('.delete-btn').forEach(btn=>{
+      btn.addEventListener('click', async (e)=>{
+        e.preventDefault();
+        e.stopPropagation(); // prevent <details> toggle
+        const id = btn.getAttribute('data-id');
+        if (!id) return;
+
+        const ok = confirm('Delete this summary permanently?');
+        if (!ok) return;
+
+        try{
+          const res = await fetch(`/report/${id}/delete`, { method: 'POST' });
+          if(!res.ok){
+            let msg = `HTTP ${res.status}`;
+            try{ const j=await res.json(); if(j.error) msg=j.error; }catch{}
+            throw new Error(msg);
+          }
+          // remove from DOM then reload so charts refresh
+          const wrap = btn.closest('.summary-item');
+          if (wrap) wrap.remove();
+          location.reload();
+        }catch(err){
+          alert('Failed to delete: ' + (err.message || 'Unknown error'));
+        }
+      });
+    });
+
+    // --------- Voice Assistant ----------
+    const micBtn = document.getElementById('micBtn');
+    const micBtnTxt = document.getElementById('micBtnTxt');
+    const micStatus = document.getElementById('micStatus');
+    const langSel = document.getElementById('langSel');
+    const finalText = document.getElementById('finalText');
+    const interimText = document.getElementById('interimText');
+    const confLine = document.getElementById('confLine');
+    const botLog = document.getElementById('botLog');
+    const editWrap = document.getElementById('editWrap');
+    const youEdit = document.getElementById('youEdit');
+    const sendBtn = document.getElementById('sendBtn');
+    const cancelEditBtn = document.getElementById('cancelEditBtn');
+    const player = document.getElementById('player');
+
+    const synth = window.speechSynthesis;
+    let recog = null, isListening = false, isSpeaking = false, currentFetchCtrl = null;
+
+    const State = Object.freeze({ IDLE:'IDLE', LISTENING:'LISTENING', PROCESSING:'PROCESSING', PLAYING:'PLAYING' });
+    let state = State.IDLE;
+
+    function setState(s){
+      state = s;
+      if (s === State.IDLE){ micBtnTxt.textContent = 'Start Mic'; micStatus.textContent='Idle'; }
+      if (s === State.LISTENING){ micBtnTxt.textContent = 'Stop Mic'; micStatus.textContent='Listening…'; }
+      if (s === State.PROCESSING){ micBtnTxt.textContent = 'Processing…'; micStatus.textContent='Thinking…'; }
+      if (s === State.PLAYING){ micBtnTxt.textContent = 'Stop'; micStatus.textContent='Speaking…'; }
+    }
+    setState(State.IDLE);
+
+    function showEditor(text){ editWrap.style.display = 'block'; youEdit.value = text || ''; youEdit.focus(); }
+    function hideEditor(){ editWrap.style.display = 'none'; }
+    function getSpoken(){ return (finalText.textContent || interimText.textContent || "").trim(); }
+
+    function startListening(){
+      if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){
+        micStatus.textContent = 'Use Chrome/Edge for mic'; return;
+      }
+      const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recog = new Ctor();
+      recog.lang = langSel.value || navigator.language || 'en-IN';
+      recog.interimResults = true; recog.continuous = true; recog.maxAlternatives = 1;
+      finalText.textContent = ''; interimText.textContent = ''; confLine.textContent = '';
+      isListening = true; setState(State.LISTENING);
+
+      let confs = [];
+      recog.onresult = (ev)=>{
+        let f = finalText.textContent, inter = '';
+        for (let i = ev.resultIndex; i < ev.results.length; i++){
+          const r = ev.results[i], a = r[0];
+          if (r.isFinal){ f = (f + ' ' + a.transcript).trim(); confs.push(a.confidence); }
+          else inter += a.transcript;
+        }
+        finalText.textContent = f; interimText.textContent = inter;
+        if (confs.length){ const avg = confs.reduce((a,b)=>a+b,0)/confs.length; confLine.textContent = `Confidence: ${(avg*100).toFixed(1)}%`; }
+      };
+      recog.onerror = (e)=>{ micStatus.textContent = `Error: ${e.error||'unknown'}`; try{recog.stop()}catch{}; isListening=false; setState(State.IDLE); };
+      recog.onend = ()=>{ isListening=false; if (state===State.LISTENING) setState(State.IDLE); };
+      try{ recog.start(); }catch{}
+    }
+    function stopListening(){ try{recog&&recog.stop()}catch{}; isListening=false; }
+
+    async function askTextWithContext(text, timeoutMs=20000){
+      const ctxId = window.CONTEXT_ID || localStorage.getItem('health_ctx_id') || "";
+      if (!ctxId) throw new Error("Please analyze a report first.");
+      const ctrl = new AbortController(); currentFetchCtrl = ctrl;
+      const t = setTimeout(()=>ctrl.abort('timeout'), timeoutMs);
+      try{
+        const res = await fetch('/ask-text', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({ text, context_id: ctxId }), signal: ctrl.signal
+        });
+        if (!res.ok){ let msg = `HTTP ${res.status}`; try{ const j=await res.json(); if(j.error) msg=j.error }catch{}; throw new Error(msg); }
+        return await res.json(); // { reply, audio_url }
+      } finally { clearTimeout(t); currentFetchCtrl = null; }
+    }
+
+    async function speakFallback(text){
+      if (!('speechSynthesis' in window)) return;
+      setState(State.PLAYING);
+      return new Promise((resolve)=>{
+        const u = new SpeechSynthesisUtterance(text); u.rate=1; u.pitch=1;
+        u.onstart=()=>{isSpeaking=true}; u.onend=()=>{isSpeaking=false; setState(State.IDLE); resolve();};
+        synth.speak(u);
+      });
+    }
+
+    async function handleQuery(text){
+      if (!text){ botLog.textContent = 'Nothing to send.'; return; }
+      setState(State.PROCESSING);
+      botLog.textContent += (botLog.textContent ? "\n" : "") + "You: " + text + "\nAI: Thinking...";
+      try{
+        const data = await askTextWithContext(text);
+        botLog.textContent = botLog.textContent.replace(/AI: Thinking\.\.\.$/, 'AI: ' + (data.reply || '(no reply)'));
+        if (data.audio_url){
+          player.src = data.audio_url; setState(State.PLAYING);
+          try{ await player.play(); }catch{ await speakFallback(data.reply || ''); return; }
+          player.onended = ()=> setState(State.IDLE);
+        } else {
+          await speakFallback(data.reply || '');
+        }
+      }catch(e){
+        botLog.textContent = botLog.textContent.replace(/AI: Thinking\.\.\.$/, `AI: Error: ${e.message}`);
+        await speakFallback("Sorry, I hit an error.");
+      }
+    }
+
+    function afterStop(){
+      const said = getSpoken();
+      if (!said){ botLog.textContent = 'You didn’t say anything.'; setState(State.IDLE); return; }
+      showEditor(said);
+      setState(State.IDLE);
+    }
+
+    micBtn.addEventListener('click', ()=>{
+      if (state === State.PLAYING){
+        try{ player.pause(); player.currentTime=0; }catch{}
+        if (isSpeaking) try{ window.speechSynthesis.cancel(); }catch{} isSpeaking=false;
+        setState(State.IDLE); return;
+      }
+      if (isListening){ stopListening(); afterStop(); }
+      else{
+        const ctx = window.CONTEXT_ID || localStorage.getItem('health_ctx_id') || "";
+        if (!ctx){ alert("Please analyze a report first."); return; }
+        startListening();
+      }
+    });
+
+    sendBtn.addEventListener('click', ()=>{
+      const text = (youEdit.value||"").trim();
+      hideEditor(); handleQuery(text);
+    });
+    cancelEditBtn.addEventListener('click', ()=>{ hideEditor(); setState(State.IDLE); });
+
+    // analyze button small feedback
+    document.querySelector('#upload form')?.addEventListener('submit', ()=>{
+      const btn = document.getElementById('analyze-btn'); btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Analyzing…';
+    });
+
+    // Floating action button interaction
+    const fab = document.getElementById('fab');
+    fab.addEventListener('click', function() {
+      document.getElementById('upload').scrollIntoView({ behavior: 'smooth' });
+      
+      this.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      this.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+      
+      setTimeout(() => {
+        this.innerHTML = '<i class="fas fa-robot"></i>';
+        this.style.background = 'var(--gradient)';
+      }, 1500);
+    });
+
+    // Add parallax effect to background elements
+    window.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      document.querySelectorAll('.bg-element').forEach((el, index) => {
+        const speed = index === 0 ? 0.02 : index === 1 ? 0.03 : 0.04;
+        const xOffset = (x - 0.5) * 100 * speed;
+        const yOffset = (y - 0.5) * 100 * speed;
+        
+        el.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+      });
+    });
+  });
+  </script>
+</body>
+</html>
